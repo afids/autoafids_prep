@@ -1,0 +1,6 @@
+# Snake files to ignore
+.snakemake/
+.snakebids
+
+# Ruff
+.ruff_cache
