@@ -31,31 +31,31 @@ wildcard_constraints:
 from pathlib import Path
 from functools import partial
 
+print(inputs["t1w"])
+
 synthstrip_bids = partial(
     bids,
     root=str(Path(config["output_dir"]) / "synthstrip"),
     datatype="anat",
     desc="synthstrip",
-    **inputs.subj_wildcards
+    **inputs["t1w"].wildcards,
 )
 
 greedy_bids = partial(
     bids,
     root=str(Path(config["output_dir"]) / "greedy"),
     datatype="anat",
-    acq="MP2RAGE",
     space="MNI152NLin2009cAsym",
-    **inputs.subj_wildcards
+    **inputs["t1w"].wildcards,
 )
 
 train_bids = partial(
     bids,
     root=str(Path(config["output_dir"]) / "train"),
     datatype="anat",
-    acq="MP2RAGE",
     space="MNI152NLin2009cAsym",
     res="1mm",
-    **inputs.subj_wildcards
+    **inputs["t1w"].wildcards,
 )
 
 
@@ -64,9 +64,8 @@ rule skull_strip:
         brainskull=bids(
             root=str(Path(config["bids_dir"])),
             datatype="anat",
-            acq="MP2RAGE",
             suffix="T1w.nii.gz",
-            **inputs.subj_wildcards
+            **inputs["t1w"].wildcards
         ),
     output:
         brain=synthstrip_bids(suffix="T1w.nii.gz"),
@@ -119,7 +118,7 @@ rule fids2mni:
 
 rule freesurfer_preproc:
     input:
-        mni_image=rules.align_template_rigid.output.out_im,
+        mni_image=inputs["t1w"].expand(rules.align_template_rigid.output.out_im),
     output:
         freesurf_mni=str(
             Path(config["output_dir"])
@@ -144,13 +143,6 @@ rule freesurfer2bids:
     output:
         train_nii=train_bids(desc="fspreproc", suffix="T1w.nii.gz"),
         train_fcsv=train_bids(desc="groundtruth", suffix="afids.fcsv"),
-        train_dir=directory(
-            bids(
-                root=str(Path(config["output_dir"]) / "train"),
-                datatype="anat",
-                **inputs.subj_wildcards
-            )
-        ),
     shell:
         """
         mri_convert {input.mni_image} {output.train_nii} &&

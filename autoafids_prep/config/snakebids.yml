@@ -71,6 +71,10 @@ parse_args:
 #-----------------------------------------------------#
 
 #--- additional BIDS-app options --- (add in below) --#
+  --acq:
+    help: 'The acquisition sequence of the T1w image (e.g. MP2RAGE). default: %s'
+    default: MP2RAGE
+    nargs: "?"
 
 #-----------------------------------------------------#
 
