@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Singularity containers: ignored
+Job stats:
+job                     count    min threads    max threads
+--------------------  -------  -------------  -------------
+align_template_rigid       33              1              1
+all                         1              1              1
+fids2mni                   40              1              1
+freesurfer2bids            40              1              1
+freesurfer_preproc         40              1              1
+skull_strip                31              1              1
+total                     185              1              1
+
+Select jobs to execute...
+
+[Wed Jun 28 02:59:48 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127/mri/T1.mgz
+    jobid: 72
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127/mri/T1.mgz
+    wildcards: subject=127
+    resources: tmpdir=/tmp
+
+[Wed Jun 28 02:59:49 2023]
+Error in rule freesurfer_preproc:
+    jobid: 72
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127/mri/T1.mgz
+    shell:
+        
+        rm -r /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127
+        recon-all -subject sub-127 -i /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz -sd /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer -autorecon1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-06-28T025920.232302.snakemake.log

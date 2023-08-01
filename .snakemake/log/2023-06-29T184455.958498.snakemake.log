@@ -1,0 +1,1274 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+fids2mni                 30              1              1
+freesurfer2bids          30              1              1
+freesurfer_preproc       30              1              1
+total                    91              1              1
+
+Select jobs to execute...
+
+[Thu Jun 29 18:45:08 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130316/anat/sub-130316_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130316/mri/T1.mgz
+    jobid: 42
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130316/mri/T1.mgz
+    wildcards: subject=130316
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:08 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-212318/anat/sub-212318_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-212318/mri/T1.mgz
+    jobid: 112
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-212318/mri/T1.mgz
+    wildcards: subject=212318
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:08 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-147737/anat/sub-147737_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-147737/mri/T1.mgz
+    jobid: 57
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-147737/mri/T1.mgz
+    wildcards: subject=147737
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:08 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-113922/anat/sub-113922_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-113922/mri/T1.mgz
+    jobid: 17
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-113922/mri/T1.mgz
+    wildcards: subject=113922
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:09 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-139637/anat/sub-139637_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-139637/mri/T1.mgz
+    jobid: 47
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-139637/mri/T1.mgz
+    wildcards: subject=139637
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:10 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-201111/anat/sub-201111_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-201111/mri/T1.mgz
+    jobid: 107
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-201111/mri/T1.mgz
+    wildcards: subject=201111
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:10 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-149539/anat/sub-149539_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-149539/mri/T1.mgz
+    jobid: 67
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-149539/mri/T1.mgz
+    wildcards: subject=149539
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:11 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-178950/anat/sub-178950_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-178950/mri/T1.mgz
+    jobid: 97
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-178950/mri/T1.mgz
+    wildcards: subject=178950
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:12 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-103111/anat/sub-103111_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-103111/mri/T1.mgz
+    jobid: 2
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-103111/mri/T1.mgz
+    wildcards: subject=103111
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:12 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151526/anat/sub-151526_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151526/mri/T1.mgz
+    jobid: 72
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151526/mri/T1.mgz
+    wildcards: subject=151526
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:14 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-654754/anat/sub-654754_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-654754/mri/T1.mgz
+    jobid: 132
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-654754/mri/T1.mgz
+    wildcards: subject=654754
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 18:45:15 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-163129/anat/sub-163129_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-163129/mri/T1.mgz
+    jobid: 92
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-163129/mri/T1.mgz
+    wildcards: subject=163129
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:25:57 2023]
+Finished job 17.
+1 of 91 steps (1%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:25:57 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-366446/anat/sub-366446_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-366446/mri/T1.mgz
+    jobid: 127
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-366446/mri/T1.mgz
+    wildcards: subject=366446
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:27:36 2023]
+Finished job 107.
+2 of 91 steps (2%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:27:36 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-199655/anat/sub-199655_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-199655/mri/T1.mgz
+    jobid: 102
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-199655/mri/T1.mgz
+    wildcards: subject=199655
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:29:26 2023]
+Finished job 92.
+3 of 91 steps (3%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:29:26 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-140925/anat/sub-140925_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-140925/mri/T1.mgz
+    jobid: 52
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-140925/mri/T1.mgz
+    wildcards: subject=140925
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:29:28 2023]
+Finished job 67.
+4 of 91 steps (4%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:29:28 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-108828/anat/sub-108828_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-108828/mri/T1.mgz
+    jobid: 12
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-108828/mri/T1.mgz
+    wildcards: subject=108828
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:29:40 2023]
+Finished job 2.
+5 of 91 steps (5%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:29:40 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151627/anat/sub-151627_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151627/mri/T1.mgz
+    jobid: 77
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151627/mri/T1.mgz
+    wildcards: subject=151627
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:29:49 2023]
+Finished job 132.
+6 of 91 steps (7%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:29:49 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-123925/anat/sub-123925_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-123925/mri/T1.mgz
+    jobid: 32
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-123925/mri/T1.mgz
+    wildcards: subject=123925
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:30:21 2023]
+Finished job 57.
+7 of 91 steps (8%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:30:21 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-160123/anat/sub-160123_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-160123/mri/T1.mgz
+    jobid: 87
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-160123/mri/T1.mgz
+    wildcards: subject=160123
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:31:38 2023]
+Finished job 97.
+8 of 91 steps (9%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:31:38 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-148840/anat/sub-148840_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-148840/mri/T1.mgz
+    jobid: 62
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-148840/mri/T1.mgz
+    wildcards: subject=148840
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:32:55 2023]
+Finished job 72.
+9 of 91 steps (10%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:32:55 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-856766/anat/sub-856766_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-856766/mri/T1.mgz
+    jobid: 142
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-856766/mri/T1.mgz
+    wildcards: subject=856766
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:33:41 2023]
+Finished job 112.
+10 of 91 steps (11%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:33:41 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-105014/anat/sub-105014_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-105014/mri/T1.mgz
+    jobid: 7
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-105014/mri/T1.mgz
+    wildcards: subject=105014
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:34:12 2023]
+Finished job 47.
+11 of 91 steps (12%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:34:12 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-245333/anat/sub-245333_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-245333/mri/T1.mgz
+    jobid: 122
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-245333/mri/T1.mgz
+    wildcards: subject=245333
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 19:34:15 2023]
+Finished job 42.
+12 of 91 steps (13%) done
+Select jobs to execute...
+
+[Thu Jun 29 19:34:15 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-115320/anat/sub-115320_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-115320/mri/T1.mgz
+    jobid: 22
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-115320/mri/T1.mgz
+    wildcards: subject=115320
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:16:02 2023]
+Finished job 127.
+13 of 91 steps (14%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:16:02 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-751348/anat/sub-751348_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-751348/mri/T1.mgz
+    jobid: 137
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-751348/mri/T1.mgz
+    wildcards: subject=751348
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:19:22 2023]
+Finished job 102.
+14 of 91 steps (15%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:19:22 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130013/anat/sub-130013_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130013/mri/T1.mgz
+    jobid: 37
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130013/mri/T1.mgz
+    wildcards: subject=130013
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:23:36 2023]
+Finished job 77.
+15 of 91 steps (16%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:23:36 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-899885/anat/sub-899885_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-899885/mri/T1.mgz
+    jobid: 147
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-899885/mri/T1.mgz
+    wildcards: subject=899885
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:25:38 2023]
+Finished job 32.
+16 of 91 steps (18%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:25:38 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-122620/anat/sub-122620_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-122620/mri/T1.mgz
+    jobid: 27
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-122620/mri/T1.mgz
+    wildcards: subject=122620
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:27:17 2023]
+Finished job 12.
+17 of 91 steps (19%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:27:17 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-156637/anat/sub-156637_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-156637/mri/T1.mgz
+    jobid: 82
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-156637/mri/T1.mgz
+    wildcards: subject=156637
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:27:26 2023]
+Finished job 87.
+18 of 91 steps (20%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:27:26 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-239944/anat/sub-239944_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-239944/mri/T1.mgz
+    jobid: 117
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-239944/mri/T1.mgz
+    wildcards: subject=239944
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:28:52 2023]
+Finished job 62.
+19 of 91 steps (21%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:28:52 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-123925/anat/sub-123925_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-123925/anat/sub-123925_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-123925/anat/sub-123925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 35
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-123925/anat/sub-123925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=123925
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:28:56 2023]
+Finished job 35.
+20 of 91 steps (22%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:28:56 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-123925/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-123925/anat/sub-123925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-123925/anat/sub-123925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-123925/anat/sub-123925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-123925/anat
+    jobid: 31
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-123925/anat/sub-123925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-123925/anat/sub-123925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-123925/mri/T1.mgz
+    wildcards: subject=123925
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:00 2023]
+Finished job 31.
+21 of 91 steps (23%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:00 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-115320/anat/sub-115320_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-115320/anat/sub-115320_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-115320/anat/sub-115320_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 25
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-115320/anat/sub-115320_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=115320
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:05 2023]
+Finished job 25.
+22 of 91 steps (24%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:05 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-147737/anat/sub-147737_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-147737/anat/sub-147737_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-147737/anat/sub-147737_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 60
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-147737/anat/sub-147737_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=147737
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:09 2023]
+Finished job 60.
+23 of 91 steps (25%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:09 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-147737/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-147737/anat/sub-147737_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-147737/anat/sub-147737_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-147737/anat/sub-147737_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-147737/anat
+    jobid: 56
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-147737/anat/sub-147737_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-147737/anat/sub-147737_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-147737/mri/T1.mgz
+    wildcards: subject=147737
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:14 2023]
+Finished job 56.
+24 of 91 steps (26%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:14 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-139637/anat/sub-139637_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-139637/anat/sub-139637_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-139637/anat/sub-139637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 50
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-139637/anat/sub-139637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=139637
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:17 2023]
+Finished job 50.
+25 of 91 steps (27%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:17 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-139637/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-139637/anat/sub-139637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-139637/anat/sub-139637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-139637/anat/sub-139637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-139637/anat
+    jobid: 46
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-139637/anat/sub-139637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-139637/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-139637/anat/sub-139637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=139637
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:23 2023]
+Finished job 46.
+26 of 91 steps (29%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:23 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-103111/anat/sub-103111_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-103111/anat/sub-103111_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-103111/anat/sub-103111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 5
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-103111/anat/sub-103111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=103111
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:28 2023]
+Finished job 5.
+27 of 91 steps (30%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:28 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-103111/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-103111/anat/sub-103111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-103111/anat/sub-103111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-103111/anat/sub-103111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-103111/anat
+    jobid: 1
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-103111/anat/sub-103111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-103111/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-103111/anat/sub-103111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=103111
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:36 2023]
+Finished job 1.
+28 of 91 steps (31%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:36 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-654754/anat/sub-654754_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-654754/anat/sub-654754_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-654754/anat/sub-654754_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 135
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-654754/anat/sub-654754_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=654754
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:38 2023]
+Finished job 135.
+29 of 91 steps (32%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:38 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-654754/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-654754/anat/sub-654754_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-654754/anat/sub-654754_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-654754/anat/sub-654754_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-654754/anat
+    jobid: 131
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-654754/anat/sub-654754_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-654754/anat/sub-654754_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-654754/mri/T1.mgz
+    wildcards: subject=654754
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:42 2023]
+Finished job 131.
+30 of 91 steps (33%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:42 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-148840/anat/sub-148840_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-148840/anat/sub-148840_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-148840/anat/sub-148840_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 65
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-148840/anat/sub-148840_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=148840
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:46 2023]
+Finished job 65.
+31 of 91 steps (34%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:46 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-148840/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-148840/anat/sub-148840_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-148840/anat/sub-148840_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-148840/anat/sub-148840_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-148840/anat
+    jobid: 61
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-148840/anat/sub-148840_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-148840/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-148840/anat/sub-148840_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=148840
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:50 2023]
+Finished job 61.
+32 of 91 steps (35%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:50 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-178950/anat/sub-178950_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-178950/anat/sub-178950_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-178950/anat/sub-178950_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 100
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-178950/anat/sub-178950_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=178950
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:53 2023]
+Finished job 100.
+33 of 91 steps (36%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:53 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-178950/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-178950/anat/sub-178950_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-178950/anat/sub-178950_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-178950/anat/sub-178950_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-178950/anat
+    jobid: 96
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-178950/anat/sub-178950_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-178950/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-178950/anat/sub-178950_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=178950
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:29:57 2023]
+Finished job 96.
+34 of 91 steps (37%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:29:57 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-366446/anat/sub-366446_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-366446/anat/sub-366446_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-366446/anat/sub-366446_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 130
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-366446/anat/sub-366446_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=366446
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:30:00 2023]
+Finished job 130.
+35 of 91 steps (38%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:30:00 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-366446/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-366446/anat/sub-366446_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-366446/anat/sub-366446_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-366446/anat/sub-366446_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-366446/anat
+    jobid: 126
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-366446/anat/sub-366446_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-366446/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-366446/anat/sub-366446_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=366446
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:30:05 2023]
+Finished job 126.
+36 of 91 steps (40%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:30:05 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-108828/anat/sub-108828_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-108828/anat/sub-108828_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-108828/anat/sub-108828_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 15
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-108828/anat/sub-108828_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=108828
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:30:09 2023]
+Finished job 15.
+37 of 91 steps (41%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:30:09 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-108828/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-108828/anat/sub-108828_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-108828/anat/sub-108828_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-108828/anat/sub-108828_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-108828/anat
+    jobid: 11
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-108828/anat/sub-108828_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-108828/anat/sub-108828_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-108828/mri/T1.mgz
+    wildcards: subject=108828
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:30:19 2023]
+Finished job 11.
+38 of 91 steps (42%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:30:19 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-239944/anat/sub-239944_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-239944/anat/sub-239944_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-239944/anat/sub-239944_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 120
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-239944/anat/sub-239944_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=239944
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:30:36 2023]
+Finished job 120.
+39 of 91 steps (43%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:30:36 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-160123/anat/sub-160123_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-160123/anat/sub-160123_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-160123/anat/sub-160123_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 90
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-160123/anat/sub-160123_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=160123
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:30:55 2023]
+Finished job 90.
+40 of 91 steps (44%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:30:56 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-160123/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-160123/anat/sub-160123_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-160123/anat/sub-160123_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-160123/anat/sub-160123_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-160123/anat
+    jobid: 86
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-160123/anat/sub-160123_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-160123/anat/sub-160123_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-160123/mri/T1.mgz
+    wildcards: subject=160123
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:30:58 2023]
+Finished job 52.
+41 of 91 steps (45%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:30:58 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-201111/anat/sub-201111_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-201111/anat/sub-201111_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-201111/anat/sub-201111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 110
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-201111/anat/sub-201111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=201111
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:03 2023]
+Finished job 86.
+42 of 91 steps (46%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:03 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-149539/anat/sub-149539_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-149539/anat/sub-149539_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-149539/anat/sub-149539_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 70
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-149539/anat/sub-149539_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=149539
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:03 2023]
+Finished job 110.
+43 of 91 steps (47%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:03 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-201111/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-201111/anat/sub-201111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-201111/anat/sub-201111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-201111/anat/sub-201111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-201111/anat
+    jobid: 106
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-201111/anat/sub-201111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-201111/anat/sub-201111_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-201111/mri/T1.mgz
+    wildcards: subject=201111
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:06 2023]
+Finished job 70.
+44 of 91 steps (48%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:06 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-149539/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-149539/anat/sub-149539_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-149539/anat/sub-149539_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-149539/anat/sub-149539_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-149539/anat
+    jobid: 66
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-149539/anat/sub-149539_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-149539/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-149539/anat/sub-149539_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=149539
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:14 2023]
+Finished job 106.
+45 of 91 steps (49%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:14 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-856766/anat/sub-856766_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-856766/anat/sub-856766_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-856766/anat/sub-856766_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 145
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-856766/anat/sub-856766_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=856766
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:17 2023]
+Finished job 66.
+46 of 91 steps (51%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:17 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-751348/anat/sub-751348_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-751348/anat/sub-751348_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-751348/anat/sub-751348_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 140
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-751348/anat/sub-751348_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=751348
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:17 2023]
+Finished job 145.
+47 of 91 steps (52%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:17 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-212318/anat/sub-212318_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-212318/anat/sub-212318_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-212318/anat/sub-212318_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 115
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-212318/anat/sub-212318_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=212318
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:21 2023]
+Finished job 140.
+48 of 91 steps (53%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:21 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-199655/anat/sub-199655_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-199655/anat/sub-199655_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-199655/anat/sub-199655_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 105
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-199655/anat/sub-199655_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=199655
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:21 2023]
+Finished job 115.
+49 of 91 steps (54%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:21 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-212318/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-212318/anat/sub-212318_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-212318/anat/sub-212318_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-212318/anat/sub-212318_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-212318/anat
+    jobid: 111
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-212318/anat/sub-212318_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-212318/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-212318/anat/sub-212318_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=212318
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:25 2023]
+Finished job 105.
+50 of 91 steps (55%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:25 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-199655/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-199655/anat/sub-199655_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-199655/anat/sub-199655_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-199655/anat/sub-199655_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-199655/anat
+    jobid: 101
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-199655/anat/sub-199655_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-199655/anat/sub-199655_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-199655/mri/T1.mgz
+    wildcards: subject=199655
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:34 2023]
+Finished job 111.
+51 of 91 steps (56%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:34 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-130316/anat/sub-130316_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130316/anat/sub-130316_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130316/anat/sub-130316_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 45
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130316/anat/sub-130316_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=130316
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:35 2023]
+Finished job 101.
+52 of 91 steps (57%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:35 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-156637/anat/sub-156637_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-156637/anat/sub-156637_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-156637/anat/sub-156637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 85
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-156637/anat/sub-156637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=156637
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:39 2023]
+Finished job 45.
+53 of 91 steps (58%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:39 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130316/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130316/anat/sub-130316_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130316/anat/sub-130316_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130316/anat/sub-130316_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130316/anat
+    jobid: 41
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130316/anat/sub-130316_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130316/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130316/anat/sub-130316_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=130316
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:42 2023]
+Finished job 85.
+54 of 91 steps (59%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:42 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-105014/anat/sub-105014_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-105014/anat/sub-105014_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-105014/anat/sub-105014_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 10
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-105014/anat/sub-105014_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=105014
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:46 2023]
+Finished job 41.
+55 of 91 steps (60%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:46 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-151627/anat/sub-151627_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151627/anat/sub-151627_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151627/anat/sub-151627_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 80
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151627/anat/sub-151627_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=151627
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:49 2023]
+Finished job 10.
+56 of 91 steps (62%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:49 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-163129/anat/sub-163129_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-163129/anat/sub-163129_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-163129/anat/sub-163129_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 95
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-163129/anat/sub-163129_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=163129
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:54 2023]
+Finished job 95.
+57 of 91 steps (63%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:55 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-163129/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-163129/anat/sub-163129_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-163129/anat/sub-163129_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-163129/anat/sub-163129_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-163129/anat
+    jobid: 91
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-163129/anat/sub-163129_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-163129/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-163129/anat/sub-163129_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=163129
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:31:58 2023]
+Finished job 80.
+58 of 91 steps (64%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:31:58 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151627/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151627/anat/sub-151627_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151627/anat/sub-151627_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151627/anat/sub-151627_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151627/anat
+    jobid: 76
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151627/anat/sub-151627_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151627/anat/sub-151627_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151627/mri/T1.mgz
+    wildcards: subject=151627
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:02 2023]
+Finished job 91.
+59 of 91 steps (65%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:02 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-113922/anat/sub-113922_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-113922/anat/sub-113922_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-113922/anat/sub-113922_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 20
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-113922/anat/sub-113922_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=113922
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:07 2023]
+Finished job 76.
+60 of 91 steps (66%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:07 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-245333/anat/sub-245333_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-245333/anat/sub-245333_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-245333/anat/sub-245333_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 125
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-245333/anat/sub-245333_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=245333
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:09 2023]
+Finished job 20.
+61 of 91 steps (67%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:10 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-113922/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-113922/anat/sub-113922_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-113922/anat/sub-113922_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-113922/anat/sub-113922_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-113922/anat
+    jobid: 16
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-113922/anat/sub-113922_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-113922/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-113922/anat/sub-113922_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=113922
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:12 2023]
+Finished job 125.
+62 of 91 steps (68%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:13 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-151526/anat/sub-151526_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151526/anat/sub-151526_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151526/anat/sub-151526_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 75
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151526/anat/sub-151526_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=151526
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:14 2023]
+Finished job 7.
+63 of 91 steps (69%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:20 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-105014/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-105014/anat/sub-105014_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-105014/anat/sub-105014_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-105014/anat/sub-105014_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-105014/anat
+    jobid: 6
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-105014/anat/sub-105014_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-105014/anat/sub-105014_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-105014/mri/T1.mgz
+    wildcards: subject=105014
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:24 2023]
+Finished job 16.
+64 of 91 steps (70%) done
+[Thu Jun 29 20:32:24 2023]
+Finished job 75.
+65 of 91 steps (71%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:24 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151526/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151526/anat/sub-151526_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151526/anat/sub-151526_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151526/anat/sub-151526_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151526/anat
+    jobid: 71
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151526/anat/sub-151526_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-151526/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-151526/anat/sub-151526_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=151526
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 20:32:26 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-899885/anat/sub-899885_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-899885/anat/sub-899885_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-899885/anat/sub-899885_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 150
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-899885/anat/sub-899885_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=899885
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:27 2023]
+Finished job 6.
+66 of 91 steps (73%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:27 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-130013/anat/sub-130013_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130013/anat/sub-130013_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130013/anat/sub-130013_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 40
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130013/anat/sub-130013_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=130013
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Thu Jun 29 20:32:32 2023]
+Finished job 71.
+67 of 91 steps (74%) done
+
+[Thu Jun 29 20:32:32 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-140925/anat/sub-140925_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-140925/anat/sub-140925_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-140925/anat/sub-140925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 55
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-140925/anat/sub-140925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=140925
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:33 2023]
+Finished job 150.
+68 of 91 steps (75%) done
+[Thu Jun 29 20:32:35 2023]
+Finished job 40.
+69 of 91 steps (76%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:35 2023]
+rule fids2mni:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/afids_groundtruth/sub-122620/anat/sub-122620_space-T1w_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-122620/anat/sub-122620_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-122620/anat/sub-122620_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    jobid: 30
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-122620/anat/sub-122620_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=122620
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:36 2023]
+Finished job 55.
+70 of 91 steps (77%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:32:36 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-140925/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-140925/anat/sub-140925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-140925/anat/sub-140925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-140925/anat/sub-140925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-140925/anat
+    jobid: 51
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-140925/anat/sub-140925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-140925/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-140925/anat/sub-140925_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=140925
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:32:40 2023]
+Finished job 30.
+71 of 91 steps (78%) done
+[Thu Jun 29 20:32:40 2023]
+Finished job 51.
+72 of 91 steps (79%) done
+[Thu Jun 29 20:34:30 2023]
+Finished job 142.
+73 of 91 steps (80%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:34:30 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-856766/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-856766/anat/sub-856766_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-856766/anat/sub-856766_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-856766/anat/sub-856766_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-856766/anat
+    jobid: 141
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-856766/anat/sub-856766_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-856766/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-856766/anat/sub-856766_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=856766
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:34:38 2023]
+Finished job 141.
+74 of 91 steps (81%) done
+[Thu Jun 29 20:37:55 2023]
+Finished job 122.
+75 of 91 steps (82%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:37:55 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-245333/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-245333/anat/sub-245333_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-245333/anat/sub-245333_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-245333/anat/sub-245333_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-245333/anat
+    jobid: 121
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-245333/anat/sub-245333_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-245333/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-245333/anat/sub-245333_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=245333
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:38:01 2023]
+Finished job 121.
+76 of 91 steps (84%) done
+[Thu Jun 29 20:38:47 2023]
+Finished job 22.
+77 of 91 steps (85%) done
+Select jobs to execute...
+
+[Thu Jun 29 20:38:47 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-115320/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-115320/anat/sub-115320_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-115320/anat/sub-115320_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-115320/anat/sub-115320_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-115320/anat
+    jobid: 21
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-115320/anat/sub-115320_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-115320/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-115320/anat/sub-115320_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=115320
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 20:38:53 2023]
+Finished job 21.
+78 of 91 steps (86%) done
+[Thu Jun 29 21:25:52 2023]
+Finished job 37.
+79 of 91 steps (87%) done
+Select jobs to execute...
+
+[Thu Jun 29 21:25:52 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130013/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130013/anat/sub-130013_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130013/anat/sub-130013_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130013/anat/sub-130013_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130013/anat
+    jobid: 36
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130013/anat/sub-130013_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-130013/anat/sub-130013_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-130013/mri/T1.mgz
+    wildcards: subject=130013
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 21:25:59 2023]
+Finished job 36.
+80 of 91 steps (88%) done
+[Thu Jun 29 21:27:50 2023]
+Finished job 147.
+81 of 91 steps (89%) done
+Select jobs to execute...
+
+[Thu Jun 29 21:27:50 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-899885/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-899885/anat/sub-899885_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-899885/anat/sub-899885_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-899885/anat/sub-899885_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-899885/anat
+    jobid: 146
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-899885/anat/sub-899885_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-899885/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-899885/anat/sub-899885_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=899885
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 21:27:57 2023]
+Finished job 146.
+82 of 91 steps (90%) done
+[Thu Jun 29 21:27:58 2023]
+Finished job 137.
+83 of 91 steps (91%) done
+Select jobs to execute...
+
+[Thu Jun 29 21:27:58 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-751348/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-751348/anat/sub-751348_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-751348/anat/sub-751348_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-751348/anat/sub-751348_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-751348/anat
+    jobid: 136
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-751348/anat/sub-751348_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-751348/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-751348/anat/sub-751348_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=751348
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 21:28:05 2023]
+Finished job 136.
+84 of 91 steps (92%) done
+[Thu Jun 29 21:28:13 2023]
+Finished job 117.
+85 of 91 steps (93%) done
+Select jobs to execute...
+
+[Thu Jun 29 21:28:13 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-239944/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-239944/anat/sub-239944_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-239944/anat/sub-239944_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-239944/anat/sub-239944_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-239944/anat
+    jobid: 116
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-239944/anat/sub-239944_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-239944/anat/sub-239944_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-239944/mri/T1.mgz
+    wildcards: subject=239944
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 21:28:20 2023]
+Finished job 116.
+86 of 91 steps (95%) done
+[Thu Jun 29 21:31:57 2023]
+Finished job 82.
+87 of 91 steps (96%) done
+Select jobs to execute...
+
+[Thu Jun 29 21:31:58 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-156637/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-156637/anat/sub-156637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-156637/anat/sub-156637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-156637/anat/sub-156637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-156637/anat
+    jobid: 81
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-156637/anat/sub-156637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-156637/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-156637/anat/sub-156637_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    wildcards: subject=156637
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 21:32:03 2023]
+Finished job 81.
+88 of 91 steps (97%) done
+[Thu Jun 29 21:34:13 2023]
+Finished job 27.
+89 of 91 steps (98%) done
+Select jobs to execute...
+
+[Thu Jun 29 21:34:14 2023]
+rule freesurfer2bids:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-122620/mri/T1.mgz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-122620/anat/sub-122620_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-122620/anat/sub-122620_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-122620/anat/sub-122620_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-122620/anat
+    jobid: 26
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-122620/anat/sub-122620_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/tfrom_greedy/sub-122620/anat/sub-122620_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/freesurfer/sub-122620/mri/T1.mgz
+    wildcards: subject=122620
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 21:34:20 2023]
+Finished job 26.
+90 of 91 steps (99%) done
+Select jobs to execute...
+
+[Thu Jun 29 21:34:20 2023]
+localrule all:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-103111/anat/sub-103111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-105014/anat/sub-105014_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-108828/anat/sub-108828_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-113922/anat/sub-113922_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-115320/anat/sub-115320_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-122620/anat/sub-122620_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-123925/anat/sub-123925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130013/anat/sub-130013_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130316/anat/sub-130316_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-139637/anat/sub-139637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-140925/anat/sub-140925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-147737/anat/sub-147737_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-148840/anat/sub-148840_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-149539/anat/sub-149539_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151526/anat/sub-151526_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151627/anat/sub-151627_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-156637/anat/sub-156637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-160123/anat/sub-160123_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-163129/anat/sub-163129_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-178950/anat/sub-178950_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-199655/anat/sub-199655_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-201111/anat/sub-201111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-212318/anat/sub-212318_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-239944/anat/sub-239944_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-245333/anat/sub-245333_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-366446/anat/sub-366446_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-654754/anat/sub-654754_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-751348/anat/sub-751348_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-856766/anat/sub-856766_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-899885/anat/sub-899885_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv
+    jobid: 0
+    reason: Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-366446/anat/sub-366446_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-654754/anat/sub-654754_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-899885/anat/sub-899885_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-163129/anat/sub-163129_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-108828/anat/sub-108828_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-122620/anat/sub-122620_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-103111/anat/sub-103111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-149539/anat/sub-149539_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-856766/anat/sub-856766_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-123925/anat/sub-123925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-156637/anat/sub-156637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-245333/anat/sub-245333_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-239944/anat/sub-239944_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130316/anat/sub-130316_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-115320/anat/sub-115320_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-160123/anat/sub-160123_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-130013/anat/sub-130013_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-113922/anat/sub-113922_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-148840/anat/sub-148840_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-199655/anat/sub-199655_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151627/anat/sub-151627_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-140925/anat/sub-140925_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-151526/anat/sub-151526_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-212318/anat/sub-212318_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-105014/anat/sub-105014_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-178950/anat/sub-178950_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-751348/anat/sub-751348_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-147737/anat/sub-147737_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-139637/anat/sub-139637_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/AFIDs-HCP/derivatives/train/sub-201111/anat/sub-201111_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 21:34:20 2023]
+Finished job 0.
+91 of 91 steps (100%) done
+Complete log: .snakemake/log/2023-06-29T184455.958498.snakemake.log

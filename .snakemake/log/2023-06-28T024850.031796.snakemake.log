@@ -1,0 +1,144 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Singularity containers: ignored
+Job stats:
+job                     count    min threads    max threads
+--------------------  -------  -------------  -------------
+align_template_rigid       40              1              1
+all                         1              1              1
+fids2mni                   40              1              1
+freesurfer2bids            40              1              1
+freesurfer_preproc         40              1              1
+skull_strip                40              1              1
+total                     201              1              1
+
+Select jobs to execute...
+
+[Wed Jun 28 02:49:40 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-106/anat/sub-106_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-106/anat/sub-106_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-106/anat/sub-106_desc-synthstrip_briamask.nii.gz
+    jobid: 19
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-106/anat/sub-106_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=106
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:49:45 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-132/anat/sub-132_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-132/anat/sub-132_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-132/anat/sub-132_desc-synthstrip_briamask.nii.gz
+    jobid: 89
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-132/anat/sub-132_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=132
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:49:46 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-120/anat/sub-120_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_briamask.nii.gz
+    jobid: 49
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=120
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:49:52 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-150/anat/sub-150_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-150/anat/sub-150_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-150/anat/sub-150_desc-synthstrip_briamask.nii.gz
+    jobid: 149
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-150/anat/sub-150_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=150
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:49:57 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-116/anat/sub-116_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-116/anat/sub-116_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-116/anat/sub-116_desc-synthstrip_briamask.nii.gz
+    jobid: 39
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-116/anat/sub-116_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=116
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:49:59 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-153/anat/sub-153_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-153/anat/sub-153_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-153/anat/sub-153_desc-synthstrip_briamask.nii.gz
+    jobid: 164
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-153/anat/sub-153_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=153
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:50:05 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-127/anat/sub-127_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-127/anat/sub-127_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-127/anat/sub-127_desc-synthstrip_briamask.nii.gz
+    jobid: 74
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-127/anat/sub-127_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=127
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:50:08 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-133/anat/sub-133_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-133/anat/sub-133_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-133/anat/sub-133_desc-synthstrip_briamask.nii.gz
+    jobid: 94
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-133/anat/sub-133_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=133
+    resources: tmpdir=/tmp
+
+[Wed Jun 28 02:50:51 2023]
+Error in rule skull_strip:
+    jobid: 49
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-120/anat/sub-120_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_briamask.nii.gz
+    shell:
+        singularity run /home/ROBARTS/ataha/graham/scratch/afids_auto_preproc/resources/synthstrip.1.3.sif -i /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-120/anat/sub-120_run-01_T1w.nii.gz -o /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_T1w.nii.gz -m /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_briamask.nii.gz
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Jun 28 02:50:53 2023]
+Finished job 89.
+1 of 201 steps (0.5%) done
+Select jobs to execute...
+
+[Wed Jun 28 02:50:53 2023]
+rule align_template_rigid:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-132/anat/sub-132_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-132/anat/sub-132_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-132/anat/sub-132_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-132/anat/sub-132_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    jobid: 88
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-132/anat/sub-132_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-132/anat/sub-132_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-132/anat/sub-132_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=132
+    resources: tmpdir=/tmp
+
+[Wed Jun 28 02:51:14 2023]
+Finished job 19.
+2 of 201 steps (1%) done
+[Wed Jun 28 02:51:18 2023]
+Finished job 39.
+3 of 201 steps (1%) done
+[Wed Jun 28 02:51:19 2023]
+Finished job 164.
+4 of 201 steps (2%) done
+[Wed Jun 28 02:51:24 2023]
+Finished job 94.
+5 of 201 steps (2%) done
+[Wed Jun 28 02:51:36 2023]
+Finished job 88.
+6 of 201 steps (3%) done
+[Wed Jun 28 02:51:40 2023]
+Finished job 149.
+7 of 201 steps (3%) done
+[Wed Jun 28 02:51:51 2023]
+Finished job 74.
+8 of 201 steps (4%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-06-28T024850.031796.snakemake.log

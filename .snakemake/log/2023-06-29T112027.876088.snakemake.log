@@ -1,0 +1,182 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+fids2mni                 32              1              1
+freesurfer2bids          32              1              1
+freesurfer_preproc       20              1              1
+total                    85              1              1
+
+Select jobs to execute...
+
+[Thu Jun 29 11:20:54 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C031/anat/sub-C031_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C031/mri/T1.mgz
+    jobid: 142
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C031/mri/T1.mgz
+    wildcards: subject=C031
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:20:54 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C020/anat/sub-C020_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C020/mri/T1.mgz
+    jobid: 87
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C020/mri/T1.mgz
+    wildcards: subject=C020
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:20:54 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C032/anat/sub-C032_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C032/mri/T1.mgz
+    jobid: 147
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C032/mri/T1.mgz
+    wildcards: subject=C032
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:20:55 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C008/anat/sub-C008_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C008/mri/T1.mgz
+    jobid: 37
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C008/mri/T1.mgz
+    wildcards: subject=C008
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:20:56 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C011/anat/sub-C011_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C011/mri/T1.mgz
+    jobid: 52
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C011/mri/T1.mgz
+    wildcards: subject=C011
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:20:58 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C006/anat/sub-C006_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C006/mri/T1.mgz
+    jobid: 27
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C006/mri/T1.mgz
+    wildcards: subject=C006
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:20:58 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C012/anat/sub-C012_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C012/mri/T1.mgz
+    jobid: 57
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C012/mri/T1.mgz
+    wildcards: subject=C012
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:21:00 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C001/anat/sub-C001_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C001/mri/T1.mgz
+    jobid: 2
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C001/mri/T1.mgz
+    wildcards: subject=C001
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:21:04 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C023/anat/sub-C023_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C023/mri/T1.mgz
+    jobid: 102
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C023/mri/T1.mgz
+    wildcards: subject=C023
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:21:05 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C007/anat/sub-C007_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C007/mri/T1.mgz
+    jobid: 32
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C007/mri/T1.mgz
+    wildcards: subject=C007
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:21:07 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C027/anat/sub-C027_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C027/mri/T1.mgz
+    jobid: 122
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C027/mri/T1.mgz
+    wildcards: subject=C027
+    resources: tmpdir=/tmp
+
+
+[Thu Jun 29 11:21:12 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C019/anat/sub-C019_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C019/mri/T1.mgz
+    jobid: 82
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C019/mri/T1.mgz
+    wildcards: subject=C019
+    resources: tmpdir=/tmp
+
+[Thu Jun 29 11:33:57 2023]
+Error in rule freesurfer_preproc:
+    jobid: 37
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C008/anat/sub-C008_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C008/mri/T1.mgz
+    shell:
+        
+        rm -r /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer/sub-C008
+        recon-all -subject sub-C008 -i /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/tfrom_greedy/sub-C008/anat/sub-C008_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz -sd /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/SNSX/derivatives/freesurfer -autorecon1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Jun 29 12:07:10 2023]
+Finished job 32.
+1 of 85 steps (1%) done
+[Thu Jun 29 12:07:34 2023]
+Finished job 87.
+2 of 85 steps (2%) done
+[Thu Jun 29 12:07:54 2023]
+Finished job 147.
+3 of 85 steps (4%) done
+[Thu Jun 29 12:08:15 2023]
+Finished job 27.
+4 of 85 steps (5%) done
+[Thu Jun 29 12:08:35 2023]
+Finished job 82.
+5 of 85 steps (6%) done
+[Thu Jun 29 12:08:52 2023]
+Finished job 142.
+6 of 85 steps (7%) done
+[Thu Jun 29 12:09:11 2023]
+Finished job 2.
+7 of 85 steps (8%) done
+[Thu Jun 29 12:09:23 2023]
+Finished job 52.
+8 of 85 steps (9%) done
+[Thu Jun 29 12:09:30 2023]
+Finished job 102.
+9 of 85 steps (11%) done
+[Thu Jun 29 12:11:20 2023]
+Finished job 57.
+10 of 85 steps (12%) done
+[Thu Jun 29 12:11:30 2023]
+Finished job 122.
+11 of 85 steps (13%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-06-29T112027.876088.snakemake.log

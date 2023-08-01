@@ -1,0 +1,3 @@
+WildcardError in file /home/ROBARTS/ataha/graham/scratch/autoafids_prep/autoafids_prep/workflow/Snakefile, line 22:
+No values given for wildcard 'subject'.
+  File "/home/ROBARTS/ataha/graham/scratch/autoafids_prep/autoafids_prep/workflow/Snakefile", line 22, in <module>

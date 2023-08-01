@@ -1,0 +1,147 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Singularity containers: ignored
+Job stats:
+job                     count    min threads    max threads
+--------------------  -------  -------------  -------------
+align_template_rigid       39              1              1
+all                         1              1              1
+fids2mni                   40              1              1
+freesurfer2bids            40              1              1
+freesurfer_preproc         40              1              1
+skull_strip                33              1              1
+total                     193              1              1
+
+Select jobs to execute...
+
+[Wed Jun 28 02:53:07 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-113/anat/sub-113_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-113/anat/sub-113_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-113/anat/sub-113_desc-synthstrip_briamask.nii.gz
+    jobid: 29
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-113/anat/sub-113_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=113
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:53:10 2023]
+rule align_template_rigid:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-127/anat/sub-127_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-127/anat/sub-127_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    jobid: 73
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    wildcards: subject=127
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:53:12 2023]
+rule skull_strip:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-120/anat/sub-120_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_briamask.nii.gz
+    jobid: 49
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-120/anat/sub-120_desc-synthstrip_T1w.nii.gz
+    wildcards: subject=120
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:53:14 2023]
+rule align_template_rigid:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-133/anat/sub-133_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-133/anat/sub-133_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-133/anat/sub-133_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-133/anat/sub-133_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    jobid: 93
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-133/anat/sub-133_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-133/anat/sub-133_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    wildcards: subject=133
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:53:18 2023]
+rule align_template_rigid:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-153/anat/sub-153_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-153/anat/sub-153_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-153/anat/sub-153_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-153/anat/sub-153_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    jobid: 163
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-153/anat/sub-153_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-153/anat/sub-153_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat
+    wildcards: subject=153
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:53:21 2023]
+rule align_template_rigid:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-106/anat/sub-106_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-106/anat/sub-106_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-106/anat/sub-106_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-106/anat/sub-106_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    jobid: 18
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-106/anat/sub-106_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-106/anat/sub-106_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    wildcards: subject=106
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:53:24 2023]
+rule align_template_rigid:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-150/anat/sub-150_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-150/anat/sub-150_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-150/anat/sub-150_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-150/anat/sub-150_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    jobid: 148
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-150/anat/sub-150_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-150/anat/sub-150_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    wildcards: subject=150
+    resources: tmpdir=/tmp
+
+
+[Wed Jun 28 02:53:26 2023]
+rule align_template_rigid:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/synthstrip/sub-116/anat/sub-116_desc-synthstrip_T1w.nii.gz, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/sub-116/anat/sub-116_run-01_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-116/anat/sub-116_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-116/anat/sub-116_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    jobid: 38
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-116/anat/sub-116_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat, /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-116/anat/sub-116_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    wildcards: subject=116
+    resources: tmpdir=/tmp
+
+[Wed Jun 28 02:54:15 2023]
+Finished job 73.
+1 of 193 steps (1%) done
+Select jobs to execute...
+
+[Wed Jun 28 02:54:15 2023]
+rule freesurfer_preproc:
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127/mri/T1.mgz
+    jobid: 72
+    reason: Missing output files: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127/mri/T1.mgz; Input files updated by another job: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    wildcards: subject=127
+    resources: tmpdir=/tmp
+
+[Wed Jun 28 02:54:17 2023]
+Error in rule freesurfer_preproc:
+    jobid: 72
+    input: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz
+    output: /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127/mri/T1.mgz
+    shell:
+        
+        rm -r /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer/sub-127
+        recon-all -subject sub-127 -i /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/tfrom_greedy/sub-127/anat/sub-127_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz -sd /home/ROBARTS/ataha/graham/scratch/afids-data/data/datasets/LHSCPD/derivatives/freesurfer -autorecon1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Jun 28 02:54:41 2023]
+Finished job 93.
+2 of 193 steps (1%) done
+[Wed Jun 28 02:54:50 2023]
+Finished job 163.
+3 of 193 steps (2%) done
+[Wed Jun 28 02:54:58 2023]
+Finished job 18.
+4 of 193 steps (2%) done
+[Wed Jun 28 02:55:01 2023]
+Finished job 38.
+5 of 193 steps (3%) done
+[Wed Jun 28 02:55:03 2023]
+Finished job 148.
+6 of 193 steps (3%) done
+[Wed Jun 28 02:55:19 2023]
+Finished job 29.
+7 of 193 steps (4%) done
+[Wed Jun 28 02:55:36 2023]
+Finished job 49.
+8 of 193 steps (4%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-06-28T025233.959968.snakemake.log

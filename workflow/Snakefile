@@ -1,0 +1,88 @@
+from os.path import join
+import itertools
+import pandas as pd
+configfile: 'config/config.yml'
+
+df = pd.read_csv(join(config['bids_dir'],'participants.tsv'),delimiter='\t')
+df = df.iloc[:, [0]]
+data_list = [entry.replace('sub-', '') for entry in df[f'{df.columns[0]}'].tolist()]
+sorted_data_list = sorted(data_list)
+
+rule all:
+    input:
+        expand(
+            join(config['output_dir'],'train','sub-{subject}','anat','sub-{subject}_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv'),
+            subject=sorted_data_list
+            )
+
+
+rule skull_strip: 
+    input: 
+    	brainskull=join(config['bids_dir'], 'sub-{subject}/anat/sub-{subject}_acq-MP2RAGE_T1w.nii.gz') 
+    output: 
+        brain=join(config['output_dir'], 'synthstrip/sub-{subject}/anat/sub-{subject}_desc-synthstrip_T1w.nii.gz'),
+        mask=join(config['output_dir'],  'synthstrip/sub-{subject}/anat/sub-{subject}_desc-synthstrip_briamask.nii.gz')
+    container: config["singularity"]["synthstrip"]
+    resources: 
+        mem_gb=20,
+        cpu =6
+    params:  
+    	synthstrip = config['synthstrip']
+    shell:
+        "python3 /freesurfer/mri_synthstrip -i {input.brainskull} -o {output.brain} -m {output.mask}"
+        
+rule align_template_rigid:
+    input:
+        imagesk = rules.skull_strip.output.brain,
+        image = rules.skull_strip.input.brainskull
+    output:
+        xfm_ras = join(config['output_dir'], 'tfrom_greedy/sub-{subject}/anat/sub-{subject}_acq-MP2RAGE_space-MNI152NLin2009cAsym.mat'),
+        out_imsk = join(config['output_dir'], 'tfrom_greedy/sub-{subject}/anat/sub-{subject}_acq-MP2RAGE_space-MNI152NLin2009cAsym_desc-synthstrip_T1w.nii.gz'),
+        out_im = join(config['output_dir'], 'tfrom_greedy/sub-{subject}/anat/sub-{subject}_acq-MP2RAGE_space-MNI152NLin2009cAsym_T1w.nii.gz')
+    params:
+        fixed = config['template'],
+    shell:
+        """
+        reg_aladin -flo {input.imagesk} -ref {params.fixed} -rigOnly -interp 0 -res {output.out_imsk} -aff {output.xfm_ras}
+        #greedy -d 3 -a -i {params.fixed} {input.imagesk} -ia-image-centers -dof 6 -o {output.xfm_ras} -n 100x50x10 -m NCC 3x3x3 &&
+        greedy -d 3 -dof 6 -rf {output.out_imsk} -rm {input.image} {output.out_im} -r {output.xfm_ras}
+        """
+
+rule fids2mni: 
+    input: 
+        groundtruth = join(config['output_dir'], 'afids_groundtruth/sub-{subject}/anat/sub-{subject}_space-T1w_desc-groundtruth_afids.fcsv'),
+        xfm_new = rules.align_template_rigid.output.xfm_ras
+    params:
+        template = workflow.source_path('../resources/dummy.fcsv'),      
+    output: 
+        fcsv_new = join(config['output_dir'], 'tfrom_greedy/sub-{subject}/anat/sub-{subject}_space-MNI152NLin2009cAsym_desc-groundtruth_afids.fcsv')
+    script:
+        './scripts/tform_script.py'
+
+rule freesurfer_preproc: 
+    input: 
+        mni_image = rules.align_template_rigid.output.out_im
+    output: 
+        freesurf_mni = join(config['output_dir'], 'freesurfer', 'sub-{subject}','mri','T1.mgz')
+    params: 
+        freesurfer_dir = join(config['output_dir'], 'freesurfer')
+    shell: 
+        """
+        rm -r {params.freesurfer_dir}/sub-{wildcards.subject}
+        recon-all -subject sub-{wildcards.subject} -i {input.mni_image} -sd {params.freesurfer_dir} -autorecon1
+        """
+
+rule freesurfer2bids: 
+    input: 
+        mni_image = rules.freesurfer_preproc.output.freesurf_mni, 
+        fcsv_afids = rules.fids2mni.output.fcsv_new
+    output: 
+        train_nii = join(config['output_dir'],'train','sub-{subject}','anat','sub-{subject}_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-fspreproc_T1w.nii.gz'),
+        train_fcsv = join(config['output_dir'],'train','sub-{subject}','anat','sub-{subject}_acq-MP2RAGE_space-MNI152NLin2009cAsym_res-1mm_desc-groundtruth_afids.fcsv'),
+        train_dir = directory(join(config['output_dir'],'train','sub-{subject}','anat'))
+    shell: 
+        """
+        mri_convert {input.mni_image} {output.train_nii} &&
+        cp {input.fcsv_afids} {output.train_fcsv}
+        """
+
