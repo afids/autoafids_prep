@@ -1,0 +1,75 @@
+[tool.poetry]
+name = "autoafids-prep"
+version = "0.1.0"
+description = "Snakebids workflow to prep data for autoafids project"
+authors = ["Alaa Taha <ataha24@uwo.ca>"]
+readme = "README.md"
+packages = [{include = "autoafids_prep"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.12"
+# Scipy fix for Snakebids version conflicts
+scipy = [
+    { version="<1.11", python = "<3.9" },
+    { version=">=1.11", python = ">=3.9" },
+]
+snakebids = "^0.8.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+isort = "^5.12.0"
+poethepoet = "^0.21.1"
+ruff = "^0.0.282"
+snakefmt = "^0.8.4"
+yamlfix = "^1.11.0"
+
+[tool.poetry.scripts]
+autoafids_prep = 'autoafids_prep.run:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+isort = "isort autoafids_prep"
+isort-check = "isort -c autoafids_prep"
+black = "black autoafids_prep"
+black-check = "black --check autoafids_prep"
+ruff = "ruff --fix autoafids_prep"
+ruff-check = "ruff autoafids_prep"
+snakefmt = "snakefmt autoafids_prep"
+snakefmt-check = "snakefmt --check autoafids_prep"
+quality = ["yamlfix", "isort", "black", "ruff", "snakefmt"]
+quality-check = [
+    "yamlfix-check",
+    "isort-check",
+    "black-check",
+    "ruff-check",
+    "snakefmt-check",
+]
+
+[tool.poe.tasks.yamlfix]
+shell = """
+find . -type f \\( \
+    -iname \\*.yaml -o -iname \\*.yml ! -iname snakemake* \
+    ! -iname snakebids* \
+\\) -exec yamlfix {} \\;
+"""
+
+[tool.poe.tasks.yamlfix-check]
+shell = """
+find . -type f \\( \
+    -iname \\*.yaml -o -iname \\*.yml ! -iname snakemake* \
+    ! -iname snakebids* \
+\\) -exec yamlfix --check {} \\;
+"""
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.ruff]
+builtins = [ "snakemake" ]
+
+[tool.snakefmt]
+include = '\.smk$|^Snakefile'
