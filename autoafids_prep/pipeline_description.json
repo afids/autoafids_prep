@@ -1,0 +1,14 @@
+{
+    "Name": "autoafids-prep",
+    "BIDSVersion": "1.4.0",
+    "DatasetType": "derivative",
+    "GeneratedBy": [
+        {
+            "Name": "autoafids-prep",
+            "Version": "0.1.0",
+            "CodeURL": "http://github.com/afids/autoafids_prep",
+            "Author": "Alaa Taha",
+            "AuthorEmail": "ataha24@uwo.ca"
+        }
+    ]
+}
