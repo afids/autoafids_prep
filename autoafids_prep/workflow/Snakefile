@@ -160,5 +160,5 @@ rule freesurfer2bids:
 
 rule all:
     input:
-        fcsv=inputs["T1w"].expand(rules.freesurfer2bids.output.train_fcsv),
+        fcsv=inputs["t1w"].expand(rules.freesurfer2bids.output.train_fcsv),
     default_target: True
