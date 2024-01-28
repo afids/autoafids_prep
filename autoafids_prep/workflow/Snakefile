@@ -1,0 +1,156 @@
+# ---- begin snakebids boilerplate ----------------------------------------------
+
+from snakebids import (
+    bids,
+    generate_inputs,
+    get_wildcard_constraints,
+)
+
+
+configfile: "config/snakebids.yml"
+
+
+# writes inputs_config.yml and updates config dict
+inputs = generate_inputs(
+    bids_dir=config["bids_dir"],
+    pybids_inputs=config["pybids_inputs"],
+    pybids_config=["bids", "derivatives"],
+    derivatives=config["derivatives"],
+    participant_label=config["participant_label"],
+    exclude_participant_label=config["exclude_participant_label"],
+)
+
+
+# this adds constraints to the bids naming
+wildcard_constraints:
+    **get_wildcard_constraints(config["pybids_inputs"]),
+
+
+# ---- end snakebids boilerplate ------------------------------------------------
+
+from pathlib import Path
+from functools import partial
+
+print(inputs["t1w"])
+
+synthstrip_bids = partial(
+    bids,
+    root=str(Path(config["output_dir"]) / "synthstrip"),
+    datatype="anat",
+    desc="synthstrip",
+    **inputs["t1w"].wildcards,
+)
+
+greedy_bids = partial(
+    bids,
+    root=str(Path(config["output_dir"]) / "greedy"),
+    datatype="anat",
+    space="MNI152NLin2009cAsym",
+    **inputs["t1w"].wildcards,
+)
+
+train_bids = partial(
+    bids,
+    root=str(Path(config["output_dir"]) / "train"),
+    datatype="anat",
+    space="MNI152NLin2009cAsym",
+    res="1mm",
+    **inputs["t1w"].wildcards,
+)
+
+
+rule skull_strip:
+    input:
+        brainskull=bids(
+            root=str(Path(config["bids_dir"])),
+            datatype="anat",
+            suffix="T1w.nii.gz",
+            **inputs["t1w"].wildcards
+        ),
+    output:
+        brain=synthstrip_bids(suffix="T1w.nii.gz"),
+        mask=synthstrip_bids(suffix="brainmask.nii.gz"),
+    container:
+        config["singularity"]["synthstrip"]
+    resources:
+        # TO BE UPDATED
+        mem_gb=20,
+        cpu=6,
+    shell:
+        "python3 /freesurfer/mri_synthstrip -i {input.brainskull} -o {output.brain} -m {output.mask}"
+
+
+rule align_template_rigid:
+    input:
+        brain=rules.skull_strip.output.brain,
+        brainskull=rules.skull_strip.input.brainskull,
+    output:
+        xfm_ras=greedy_bids(suffix="xfm.mat"),
+        out_imsk=greedy_bids(desc="synthstrip", suffix="T1w.nii.gz"),
+        out_im=greedy_bids(suffix="T1w.nii.gz"),
+    params:
+        fixed=config["template"],
+    shell:
+        """
+        reg_aladin -flo {input.brain} -ref {params.fixed} -rigOnly -interp 0 -res {output.out_imsk} -aff {output.xfm_ras}
+        greedy -d 3 -dof 6 -rf {output.out_imsk} -rm {input.brainskull} {output.out_im} -r {output.xfm_ras}
+        """
+
+
+rule fids2mni:
+    input:
+        xfm_new=rules.align_template_rigid.output.xfm_ras,
+        groundtruth=bids(
+            root=str(Path(config["output_dir"]) / "afids_groundtruth"),
+            datatype="anat",
+            space="T1w",
+            desc="groundtruth",
+            suffix="afids.fcsv",
+            **inputs.subj_wildcards
+        ),
+    params:
+        fcsv=str(Path(workflow.basedir).parent / config["fcsv"]),
+    output:
+        fcsv_new=greedy_bids(desc="groundtruth", suffix="afids.fcsv"),
+    script:
+        "../scripts/tform_script.py"
+
+
+rule freesurfer_preproc:
+    input:
+        mni_image=inputs["t1w"].expand(rules.align_template_rigid.output.out_im),
+    output:
+        freesurf_mni=str(
+            Path(config["output_dir"])
+            / "freesurfer"
+            / "sub-{subject}"
+            / "mri"
+            / "T1.mgz"
+        ),
+    params:
+        freesurfer_dir=str(Path(config["output_dir"]) / "freesurfer"),
+    shell:
+        """
+        rm -r {params.freesurfer_dir}/sub-{wildcards.subject}
+        recon-all -subject sub-{wildcards.subject} -i {input.mni_image} -sd {params.freesurfer_dir} -autorecon1
+        """
+
+
+rule freesurfer2bids:
+    input:
+        mni_image=rules.freesurfer_preproc.output.freesurf_mni,
+        fcsv_afids=rules.fids2mni.output.fcsv_new,
+    output:
+        train_nii=train_bids(desc="fspreproc", suffix="T1w.nii.gz"),
+        train_fcsv=train_bids(desc="groundtruth", suffix="afids.fcsv"),
+    shell:
+        """
+        mri_convert {input.mni_image} {output.train_nii} &&
+        cp {input.fcsv_afids} {output.train_fcsv}
+        """
+
+
+rule all:
+    input:
+        fcsv=inputs["t1w"].expand(rules.freesurfer2bids.output.train_fcsv),
+    default_target: True

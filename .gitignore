@@ -1,0 +1,12 @@
+# Python files
+__pycache__/
+
+# Snake files to ignore
+.snakemake/
+.snakebids
+
+# Ruff
+.ruff_cache
+
+# Test
+test/data/derivatives/config/
