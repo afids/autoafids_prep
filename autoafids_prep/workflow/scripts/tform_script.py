@@ -66,5 +66,5 @@ if __name__ == "__main__":
         fcsv_source=snakemake.input["groundtruth"],
         xfm_txt=snakemake.input["xfm_new"],
         template=snakemake.params["fcsv"],
-        fcsv_out=snakemake.output["fcsv_new"],
+        fcsv_new=snakemake.output["fcsv_new"],
     )

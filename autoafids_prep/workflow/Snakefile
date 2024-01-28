@@ -89,7 +89,7 @@ rule align_template_rigid:
         out_imsk=greedy_bids(desc="synthstrip", suffix="T1w.nii.gz"),
         out_im=greedy_bids(suffix="T1w.nii.gz"),
     params:
-        fixed=config["template"],
+        fixed = str(Path(workflow.basedir).parent / config['template'])
     shell:
         """
         reg_aladin -flo {input.brain} -ref {params.fixed} -rigOnly -interp 0 -res {output.out_imsk} -aff {output.xfm_ras}
@@ -106,19 +106,20 @@ rule fids2mni:
             space="T1w",
             desc="groundtruth",
             suffix="afids.fcsv",
-            **inputs.subj_wildcards
+            **inputs["t1w"].wildcards
         ),
     params:
         fcsv=str(Path(workflow.basedir).parent / config["fcsv"]),
     output:
         fcsv_new=greedy_bids(desc="groundtruth", suffix="afids.fcsv"),
     script:
-        "../scripts/tform_script.py"
+        "./scripts/tform_script.py"
+        
 
 
 rule freesurfer_preproc:
     input:
-        mni_image=inputs["t1w"].expand(rules.align_template_rigid.output.out_im),
+        mni_image=rules.align_template_rigid.output.out_im,
     output:
         freesurf_mni=str(
             Path(config["output_dir"])
@@ -132,7 +133,7 @@ rule freesurfer_preproc:
     shell:
         """
         rm -r {params.freesurfer_dir}/sub-{wildcards.subject}
-        recon-all -subject sub-{wildcards.subject} -i {input.mni_image} -sd {params.freesurfer_dir} -autorecon1
+        recon-all -subject sub-{wildcards.subject} -i {input.mni_image} -sd {params.freesurfer_dir} -autorecon1 -noskullstrip
         """
 
 
@@ -148,9 +149,16 @@ rule freesurfer2bids:
         mri_convert {input.mni_image} {output.train_nii} &&
         cp {input.fcsv_afids} {output.train_fcsv}
         """
-
+        
+rule mrinormalize:
+    input:
+        image=rules.freesurfer2bids.output.train_nii,
+    output:
+        train_nii=train_bids(desc="fspreprocnorm", suffix="T1w.nii.gz")
+    script:
+        "./scripts/norm_script.py"
 
 rule all:
     input:
-        fcsv=inputs["t1w"].expand(rules.freesurfer2bids.output.train_fcsv),
+        fcsv=inputs["t1w"].expand(rules.mrinormalize.output.train_nii),
     default_target: True
