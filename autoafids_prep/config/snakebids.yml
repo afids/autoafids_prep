@@ -72,13 +72,28 @@ parse_args:
 
 #--- additional BIDS-app options --- (add in below) --#
   --acq:
-    help: 'The acquisition sequence of the T1w image (e.g. MP2RAGE). default: %s'
+    help: 'The acquisition sequence of the T1w image (e.g. MP2RAGE). (default: %(default)s)'
     default: MP2RAGE
     nargs: "?"
+
+  --profile:
+    help: 'Specify the profile and configration for preprocessing. If custom is chosen, then an interactive mode is triggered (default: %(default)s)'
+    choices: ['slow','medium','fast','superfast','custom']
+    default: 'superfast'
+
+  --norm:
+    help: 'Specify the normalization scheme for images as a binary choice. {0 = z-score, 1 = min-max , 2 = tissue-based [notavailable]}. (default: %(default)s)'
+    choices: ['0', '1']
+    default: '0'  # Default to 0, which represents z-score normalization
+
+  --res:
+    help: 'Specify the resampling resolution (e.g. 1mm) for images, any resolution is supported but limited to isotropic resampling. (default: %(default)s)'
+    default: '1'  # Default to 1 
 
 #-----------------------------------------------------#
 
 # Workflow specific config
+
 # Nifti template
 template: 'resources/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz'
 

@@ -1,14 +1,14 @@
 # ---- begin snakebids boilerplate ----------------------------------------------
-
+import sys
+from pathlib import Path
+from functools import partial
 from snakebids import (
     bids,
     generate_inputs,
     get_wildcard_constraints,
 )
 
-
 configfile: "config/snakebids.yml"
-
 
 # writes inputs_config.yml and updates config dict
 inputs = generate_inputs(
@@ -20,19 +20,70 @@ inputs = generate_inputs(
     exclude_participant_label=config["exclude_participant_label"],
 )
 
-
 # this adds constraints to the bids naming
 wildcard_constraints:
     **get_wildcard_constraints(config["pybids_inputs"]),
 
+# ---- end snakebids boilerplate -------------------------------------------------
 
-# ---- end snakebids boilerplate ------------------------------------------------
 
-from pathlib import Path
-from functools import partial
+# ---- begin preproc profile pathways --------------------------------------------
 
-print(inputs["t1w"])
+# Determine if custom profile is selected for interactive configuration
+if config["profile"] == 'custom':
+    print('# ---- begin interactive snakebids mode -----------------------------------------')
 
+    def prompt_for_configuration_options():
+        configs = {
+            "freesurfer_preproc": {"message": "Do you want to run freesurfer's autorecon 1? (y/n)", "type": "bool"},
+            "run_n4_bias_correction": {"message": "Do you want to run N4BiasFieldCorrection? (y/n)", "type": "bool"},
+            # Ensure each option is unique and correctly conditional
+            "skull_strip": {"message": "Do you want to skull strip your data? (y/n)", "type": "bool", "condition": "freesurfer_preproc"}
+        }
+        config_responses = {}
+
+        for config_option, config_info in configs.items():
+            # Skip questions based on conditions
+            if config_info.get("condition") and not config_responses.get(config_info["condition"], False):
+                continue
+
+            user_input = input(config_info["message"]).strip().lower()
+            while user_input not in ["y", "n"]:
+                print("Invalid input. Please choose 'y' for yes or 'n' for no.")
+                user_input = input(config_info["message"]).strip().lower()
+            config_responses[config_option] = user_input == "y"
+        return config_responses
+
+    user_configurations = prompt_for_configuration_options()
+else:
+    processing_steps = {
+        "slow": ["freesurfer_preproc", "skull_strip", "norm_im"],
+        "medium": ["n4_bias_correction", "skull_strip", "norm_im", "resample_im"],
+        "fast": ["n4_bias_correction", "norm_im", "resample_im"],
+        "superfast": ["norm_im", "resample_im"]
+    }
+
+    profile_settings = processing_steps[config["profile"]]
+
+# Normalization scheme 
+norm_methods = {
+    0: "zscore", #best for multi-contrast data
+    1: "minmax", #best for data from the same center
+    2: "percentile", #best for CT imaging [notavail]
+    3: "wm", #triggers FS WM tissue normalization then z-scores output (only for T1w)[notavail]
+    4: "other" #user must provide a python funtion (custom)[notavail]
+}
+
+# Chosen norm method
+chosen_norm_method =  norm_methods[int(config['norm'])]
+
+# Chosen resampling resolution
+resolution = float(config['res'])
+
+print(f'..... {config["profile"]} preprocessing configration .....')
+print(f' the folowing squence will be triggered {profile_settings}')
+
+# ---- end preproc profile pathways ----------------------------------------------
 synthstrip_bids = partial(
     bids,
     root=str(Path(config["output_dir"]) / "synthstrip"),
@@ -41,124 +92,162 @@ synthstrip_bids = partial(
     **inputs["t1w"].wildcards,
 )
 
-greedy_bids = partial(
+im_normed = partial(
     bids,
-    root=str(Path(config["output_dir"]) / "greedy"),
+    root=str(Path(config["output_dir"]) / "normalize"),
     datatype="anat",
-    space="MNI152NLin2009cAsym",
+    desc=chosen_norm_method,
     **inputs["t1w"].wildcards,
 )
 
+im_resamp = partial(
+    bids,
+    root=str(Path(config["output_dir"]) / "resample"),
+    datatype="anat",
+    desc=chosen_norm_method,
+    res=config["res"],
+    **inputs["t1w"].wildcards,
+)
 train_bids = partial(
     bids,
     root=str(Path(config["output_dir"]) / "train"),
     datatype="anat",
-    space="MNI152NLin2009cAsym",
-    res="1mm",
     **inputs["t1w"].wildcards,
 )
 
+if "n4_bias_correction" in profile_settings:
 
-rule skull_strip:
-    input:
-        brainskull=bids(
+    rule n4_bias_correction:
+        input:
+            im=bids(
             root=str(Path(config["bids_dir"])),
             datatype="anat",
             suffix="T1w.nii.gz",
             **inputs["t1w"].wildcards
-        ),
-    output:
-        brain=synthstrip_bids(suffix="T1w.nii.gz"),
-        mask=synthstrip_bids(suffix="brainmask.nii.gz"),
-    container:
-        config["singularity"]["synthstrip"]
-    resources:
-        # TO BE UPDATED
-        mem_gb=20,
-        cpu=6,
-    shell:
-        "python3 /freesurfer/mri_synthstrip -i {input.brainskull} -o {output.brain} -m {output.mask}"
+            ),
+        output:
+            corrected_im=bids(
+                root=str(Path(config["output_dir"]) / "n4biascorr"),
+                datatype="anat",
+                desc="n4corrected",
+                suffix="T1w.nii.gz",
+                **inputs["t1w"].wildcards
+            ),
+        script:
+            "scripts/n4_bias_corr.py"
 
-
-rule align_template_rigid:
-    input:
-        brain=rules.skull_strip.output.brain,
-        brainskull=rules.skull_strip.input.brainskull,
-    output:
-        xfm_ras=greedy_bids(suffix="xfm.mat"),
-        out_imsk=greedy_bids(desc="synthstrip", suffix="T1w.nii.gz"),
-        out_im=greedy_bids(suffix="T1w.nii.gz"),
-    params:
-        fixed = str(Path(workflow.basedir).parent / config['template'])
-    shell:
-        """
-        reg_aladin -flo {input.brain} -ref {params.fixed} -rigOnly -interp 0 -res {output.out_imsk} -aff {output.xfm_ras}
-        greedy -d 3 -dof 6 -rf {output.out_imsk} -rm {input.brainskull} {output.out_im} -r {output.xfm_ras}
-        """
-
-
-rule fids2mni:
-    input:
-        xfm_new=rules.align_template_rigid.output.xfm_ras,
-        groundtruth=bids(
-            root=str(Path(config["output_dir"]) / "afids_groundtruth"),
+if "freesurfer_preproc" in profile_settings:
+    
+    rule freesurfer_preproc:
+        input:
+            rimage=bids(
+            root=str(Path(config["bids_dir"])),
             datatype="anat",
-            space="T1w",
-            desc="groundtruth",
-            suffix="afids.fcsv",
+            suffix="T1w.nii.gz",
             **inputs["t1w"].wildcards
-        ),
+            ),
+    
+        output:
+            freesurf_mni=str(
+                Path(config["output_dir"])
+                / "freesurfer"
+                / "sub-{subject}"
+                / "mri"
+                / "T1.mgz"
+            ),
+            bids_im = bids(
+                root=str(Path(config["output_dir"]) / "freesurfer"),
+                datatype="anat",
+                desc="autorecon1",
+                suffix="T1w.nii.gz",
+                **inputs["t1w"].wildcards
+                )
+        params:
+            freesurfer_dir=str(Path(config["output_dir"]) / "freesurfer"),
+
+        shell:
+            """
+            rm -r {params.freesurfer_dir}/sub-{wildcards.subject}
+            recon-all -subject sub-{wildcards.subject} -i {input.rimage} -sd {params.freesurfer_dir} -autorecon1 -noskullstrip
+            cp {output.freesurf_mni} {output.bids_im}
+            """
+
+if "skull_strip" in profile_settings:    
+
+    rule skull_strip:
+        input:
+            brainskull=lambda wildcards: bids(
+                root=str(Path(config["output_dir"]) / "n4biascorr"),
+                datatype="anat",
+                desc="n4corrected",
+                suffix="T1w.nii.gz",
+                **inputs["t1w"].wildcards
+            ) if "n4_bias_correction" in profile_settings else bids(
+                root=str(Path(config["output_dir"]) / "freesurfer"),
+                datatype="anat",
+                desc="autorecon1",
+                suffix="T1w.nii.gz",
+                **inputs["t1w"].wildcards
+            ),
+        output:
+            brain=synthstrip_bids(suffix="T1w.nii.gz"),
+            mask=synthstrip_bids(suffix="brainmask.nii.gz"),
+        container:
+            config["singularity"]["synthstrip"]
+        resources:
+            # TO BE UPDATED
+            mem_gb=20,
+            cpu=6,
+        shell:
+            "python3 /freesurfer/mri_synthstrip -i {input.brainskull} -o {output.brain} -m {output.mask}"
+
+rule norm_im:
+    input:
+        im_raw= lambda wildcards: synthstrip_bids(suffix="T1w.nii.gz") if "skull_strip" in profile_settings else
+            bids(root=str(Path(config["output_dir"]) / "n4biascorr"),
+                 datatype="anat",
+                 desc="n4corrected",
+                 suffix="T1w.nii.gz",
+                 **inputs["t1w"].wildcards) if "n4_bias_correction" in profile_settings else
+            bids(root=str(Path(config["bids_dir"])),
+            datatype="anat",
+            suffix="T1w.nii.gz",
+            **inputs["t1w"].wildcards)
+    output:
+        im_norm=im_normed(suffix="T1w.nii.gz"),
     params:
-        fcsv=str(Path(workflow.basedir).parent / config["fcsv"]),
-    output:
-        fcsv_new=greedy_bids(desc="groundtruth", suffix="afids.fcsv"),
+        norm_method=chosen_norm_method
     script:
-        "./scripts/tform_script.py"
-        
+        "scripts/norm_schemes.py"
+
+if "resample_im" in profile_settings:    
+
+    rule resample_im:
+        input:
+            im_normed=rules.norm_im.output.im_norm,
+        params:
+            res=resolution
+        output:
+            resam_im=im_resamp(suffix="T1w.nii.gz"),
+        script:
+            "./scripts/resample_img.py"
+    
+
+# rule mldata:
+#     input:
+#         finalimg = rules.norm_im.output.im_norm if "resample_im" not in profile_settings else rules.resample_im.output.resam_im,
+#     output: 
+#         traindir = 
+#     shell: 
+#         """cp {snakemake.input} {snakemake.output}"""
 
 
-rule freesurfer_preproc:
-    input:
-        mni_image=rules.align_template_rigid.output.out_im,
-    output:
-        freesurf_mni=str(
-            Path(config["output_dir"])
-            / "freesurfer"
-            / "sub-{subject}"
-            / "mri"
-            / "T1.mgz"
-        ),
-    params:
-        freesurfer_dir=str(Path(config["output_dir"]) / "freesurfer"),
-    shell:
-        """
-        rm -r {params.freesurfer_dir}/sub-{wildcards.subject}
-        recon-all -subject sub-{wildcards.subject} -i {input.mni_image} -sd {params.freesurfer_dir} -autorecon1 -noskullstrip
-        """
+# dynamic_inputs = [inputs["t1w"].expand(rules.resample_im.output.resam_im),inputs["t1w"].expand(rules.norm_im.output.im_norm)]
 
 
-rule freesurfer2bids:
-    input:
-        mni_image=rules.freesurfer_preproc.output.freesurf_mni,
-        fcsv_afids=rules.fids2mni.output.fcsv_new,
-    output:
-        train_nii=train_bids(desc="fspreproc", suffix="T1w.nii.gz"),
-        train_fcsv=train_bids(desc="groundtruth", suffix="afids.fcsv"),
-    shell:
-        """
-        mri_convert {input.mni_image} {output.train_nii} &&
-        cp {input.fcsv_afids} {output.train_fcsv}
-        """
-        
-rule mrinormalize:
-    input:
-        image=rules.freesurfer2bids.output.train_nii,
-    output:
-        train_nii=train_bids(desc="fspreprocnorm", suffix="T1w.nii.gz")
-    script:
-        "./scripts/norm_script.py"
 
 rule all:
     input:
-        fcsv=inputs["t1w"].expand(rules.mrinormalize.output.train_nii),
+        norm = inputs["t1w"].expand(rules.norm_im.output.im_norm),
+        samp = inputs["t1w"].expand(rules.resample_im.output.resam_im)
     default_target: True
