@@ -87,8 +87,8 @@ parse_args:
     default: '0'  # Default to 0, which represents z-score normalization
 
   --res:
-    help: 'Specify the resampling resolution (e.g. 1mm) for images, any resolution is supported but limited to isotropic resampling. (default: %(default)s)'
-    default: '1'  # Default to 1 
+    help: 'Specify the resampling resolution (e.g. "100" for 1mm) for images, any resolution is supported but limited to isotropic resampling. (default: %(default)s)'
+    default: '100'  # Default to 1 
 
 #-----------------------------------------------------#
 

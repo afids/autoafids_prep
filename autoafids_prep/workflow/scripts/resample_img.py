@@ -24,7 +24,7 @@ def resample_to_isotropic_resolution(nifti_image_path, isotropic_resolution, out
 
     # Create the target affine with the desired isotropic resolution
     target_affine = np.copy(original_affine)
-    np.fill_diagonal(target_affine, isotropic_resolution)
+    np.fill_diagonal(target_affine, isotropic_resolution/100)
 
     # Resample the image
     resampled_image = resample_img(img,
