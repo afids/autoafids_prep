@@ -99,6 +99,7 @@ template: 'resources/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz'
 
 # AFIDs fcsv template
 fcsv: 'resources/dummy.fcsv'
+fcsv_mni: 'resources/tpl-MNI152NLin2009cAsym_res-01_desc-groundtruth_afids.fcsv'
 
 singularity:
   synthstrip: docker://freesurfer/synthstrip:1.3

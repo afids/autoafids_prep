@@ -84,6 +84,14 @@ print(f'..... {config["profile"]} preprocessing configration .....')
 print(f' the folowing squence will be triggered {profile_settings}')
 
 # ---- end preproc profile pathways ----------------------------------------------
+greedy_bids = partial(
+    bids,
+    root=str(Path(config["output_dir"]) / "greedy"),
+    datatype="anat",
+    space="native",
+    **inputs["t1w"].wildcards,
+)
+
 synthstrip_bids = partial(
     bids,
     root=str(Path(config["output_dir"]) / "synthstrip"),
@@ -231,7 +239,31 @@ if "resample_im" in profile_settings:
             resam_im=im_resamp(suffix="T1w.nii.gz"),
         script:
             "./scripts/resample_img.py"
-    
+
+rule mni2sub:
+    input:
+        im_resamp = rules.n4_bias_correction.output.corrected_im
+    output: 
+        xfm_ras = greedy_bids(suffix="xfm.mat"),
+        out_im = greedy_bids(suffix="MNI.nii.gz")
+    params:
+        moving = str(Path(workflow.basedir).parent / config['template'])
+    shell: 
+        """
+        reg_aladin -flo {params.moving} -ref {input.im_resamp} -rigOnly -res {output.out_im} -aff {output.xfm_ras}
+        """
+        #greedy -d 3 -a -dof 6 -o {output.xfm_ras} -i {input.im_resamp} {params.moving} -n 100x50x0 -m NCC 4x4x4
+
+rule mni2subfids:
+    input:
+        xfm_new = rules.mni2sub.output.xfm_ras
+    params:
+        fcsv=str(Path(workflow.basedir).parent / config["fcsv"]),
+        fcsv_mni = str(Path(workflow.basedir).parent / config["fcsv_mni"])
+    output:
+        fcsv_new=greedy_bids(desc="MNI", suffix="afids.fcsv"),
+    script:
+        "./scripts/tform_script.py"
 
 # rule mldata:
 #     input:
@@ -249,5 +281,6 @@ if "resample_im" in profile_settings:
 rule all:
     input:
         norm = inputs["t1w"].expand(rules.norm_im.output.im_norm),
-        samp = inputs["t1w"].expand(rules.resample_im.output.resam_im)
+        samp = inputs["t1w"].expand(rules.resample_im.output.resam_im),
+        mni = inputs["t1w"].expand(rules.mni2subfids.output.fcsv_new),
     default_target: True
