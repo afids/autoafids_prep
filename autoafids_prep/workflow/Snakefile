@@ -242,7 +242,11 @@ if "resample_im" in profile_settings:
 
 rule mni2sub:
     input:
-        im_resamp = rules.n4_bias_correction.output.corrected_im
+        im_resamp = rules.n4_bias_correction.output.corrected_im if "n4_bias_correction" in profile_settings else
+            bids(root=str(Path(config["bids_dir"])),
+            datatype="anat",
+            suffix="T1w.nii.gz",
+            **inputs["t1w"].wildcards)
     output: 
         xfm_ras = greedy_bids(suffix="xfm.mat"),
         out_im = greedy_bids(suffix="MNI.nii.gz")
