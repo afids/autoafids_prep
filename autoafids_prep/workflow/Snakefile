@@ -80,6 +80,14 @@ chosen_norm_method =  norm_methods[int(config['norm'])]
 # Chosen resampling resolution
 resolution = float(config['res'])
 
+# Chosen template 
+templates = {
+    "T1w": config['templatet1w'], 
+    "T2w": config['templatet2w']
+}
+
+chosen_template =  templates[config['template']]
+
 print(f'..... {config["profile"]} preprocessing configration .....')
 print(f' the folowing squence will be triggered {profile_settings}')
 
@@ -251,7 +259,7 @@ rule mni2sub:
         xfm_ras = greedy_bids(suffix="xfm.mat"),
         out_im = greedy_bids(suffix="MNI.nii.gz")
     params:
-        moving = str(Path(workflow.basedir).parent / config['template'])
+        moving = str(Path(workflow.basedir).parent / chosen_template)
     shell: 
         """
         reg_aladin -flo {params.moving} -ref {input.im_resamp} -rigOnly -res {output.out_im} -aff {output.xfm_ras}
