@@ -63,7 +63,7 @@ def xfm_fcsv(fcsv_source, xfm_txt, template, fcsv_new):
 
 if __name__ == "__main__":
     xfm_fcsv(
-        fcsv_source=snakemake.input["groundtruth"],
+        fcsv_source=snakemake.params["fcsv_mni"],
         xfm_txt=snakemake.input["xfm_new"],
         template=snakemake.params["fcsv"],
         fcsv_new=snakemake.output["fcsv_new"],

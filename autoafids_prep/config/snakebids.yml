@@ -24,7 +24,7 @@ targets_by_analysis_level:
 pybids_inputs:
   t1w:
     filters:
-      suffix: T1w
+      suffix: [T1w,T2w]
       extension: .nii.gz
       datatype: anat
     wildcards:
@@ -72,18 +72,40 @@ parse_args:
 
 #--- additional BIDS-app options --- (add in below) --#
   --acq:
-    help: 'The acquisition sequence of the T1w image (e.g. MP2RAGE). default: %s'
+    help: 'The acquisition sequence of the T1w image (e.g. MP2RAGE). (default: %(default)s)'
     default: MP2RAGE
     nargs: "?"
+
+  --profile:
+    help: 'Specify the profile and configration for preprocessing. If custom is chosen, then an interactive mode is triggered (default: %(default)s)'
+    choices: ['slow','medium','fast','superfast','custom']
+    default: 'superfast'
+
+  --norm:
+    help: 'Specify the normalization scheme for images as a binary choice. {0 = z-score, 1 = min-max , 2 = tissue-based [notavailable]}. (default: %(default)s)'
+    choices: ['0', '1']
+    default: '0'  # Default to 0, which represents z-score normalization
+
+  --res:
+    help: 'Specify the resampling resolution (e.g. "100" for 1mm) for images, any resolution is supported but limited to isotropic resampling. (default: %(default)s)'
+    default: '100'  # Default to 1 
+    
+  --template: 
+    help: 'Specify the template to use (e.g., T1w or T2w).'
+    default: 'T1w'
 
 #-----------------------------------------------------#
 
 # Workflow specific config
+
 # Nifti template
-template: 'resources/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz'
+templatet1w: 'resources/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz'
+templatet2w: 'resources/tpl-MNI152NLin2009cAsym_res-01_T2w.nii.gz'
+
 
 # AFIDs fcsv template
 fcsv: 'resources/dummy.fcsv'
+fcsv_mni: 'resources/tpl-MNI152NLin2009cAsym_res-01_desc-groundtruth_afids.fcsv'
 
 singularity:
   synthstrip: docker://freesurfer/synthstrip:1.3
