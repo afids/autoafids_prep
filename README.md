@@ -79,4 +79,4 @@ Here are some future plans for `autoafids_prep`:
 - Synchronize the pipeline with [AFIDS-CNN](https://github.com/afids/afids-CNN) to avoid latency between downloading the datasets and preparing them for training the model. 
 
 ## Questions, Issues, Suggestions, and Other Feedback
-Please reach out if you have any questions, suggestions, or other feedback related to this software—either through email (dbansal7@uwo.ca) or the discussions page. You can also ping me on Slack or even set up an online video/audio call! Larger issues or feature requests can be posted and tracked via the issues page. Finally, you can also reach out to Alaa Taha, the Science Lead for autoafids_prep.
+Please reach out if you have any questions, suggestions, or other feedback related to this software—either through email (dbansal7@uwo.ca) or the discussions page. Larger issues or feature requests can be posted and tracked via the issues page. Finally, you can also reach out to Alaa Taha, the Science Lead for autoafids_prep.
