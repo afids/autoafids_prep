@@ -13,10 +13,11 @@ This Python package is a data processing pipeline based on Snakemake and SnakeBI
 
 ## Table of Contents
 1. [Installation](#installation)
-2. [Datasets](#datasets)
-3. [Known issues](#known-issues)
-4. [Roadmap](#roadmap)
-5. [Questions, Issues, Suggestions, and Other Feedback](#questions--issues)
+2. [Getting the datasets](#datasets)
+3. [Quick Guide](#quick-guide) 
+4. [Known issues](#known-issues)
+5. [Roadmap](#roadmap)
+6. [Questions, Issues, Suggestions, and Other Feedback](#questions--issues)
 
 ## Installation
 
@@ -50,7 +51,7 @@ To activate the virtual environment, use:
 poetry shell
 ```
 
-## Datasets
+## Getting the datasets
 All the datasets mentioned below have been deposited at DOI-issuing repositories separately and follow the BIDS directory hierarchy. To download them, follow the links:
 
 1. [100 Unrelated Human Connectome Project (AFIDs-HCP)](https://zenodo.org/records/8072105) - You'll need to be authenticated before you can download this dataset. Please contact Alaa Taha for the required access code. 
@@ -58,8 +59,20 @@ All the datasets mentioned below have been deposited at DOI-issuing repositories
 3. [The Stereotactic Neurosurgery (SNSX) dataset](https://openneuro.org/datasets/ds004470/versions/1.0.0)
 4. [The London Health Sciences Center Parkinson’s disease (LHSCPD) dataset](https://openneuro.org/datasets/ds004471/versions/1.0.0)
 
+## Quick Guide
+To display help information about the `autoafids_prep` program, use:
+
+```
+autoafids_prep -h
+```
+
+To execute a dry-run of the workflow, use:
+
+```
+autoafids_prep path/to/dataset path/to/dataset/derivatives participant --cores 1 -np --force-output
+```
 ## Known Issues
-- Contingent on the profile flag (i.e., fast, slow) used when running the pipeline, some python libraries like SimpleITK and reg_aladin are not installed along with the `autoafids_prep` package. 
+- Some required modules like SimpleITK and reg_aladin are not installed along with the `autoafids_prep` package and therefore cause issues when the user specifies a profile flag (i.e., fast, slow) for the workflow. 
 
 ## Roadmap
 Here are some future plans for `autoafids_prep`:
