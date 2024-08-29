@@ -6,7 +6,17 @@ from snakebids.cli import add_dynamic_args
 
 
 def get_parser():
-    """Exposes parser for sphinx doc generation, cwd is the docs dir"""
+    """
+    Exposes parser for sphinx doc generation, cwd is the docs dir
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+        app.parser::
+
+    """
     app = SnakeBidsApp("../autoafids_prep", skip_parse_args=True)
     add_dynamic_args(app.parser, app.config["parse_args"], app.config["pybids_inputs"])
     return app.parser
