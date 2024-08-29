@@ -13,7 +13,7 @@ This Python package is a data processing pipeline based on Snakemake and SnakeBI
 
 ## Table of Contents
 1. [Installation](#installation)
-2. [Getting the datasets](#datasets)
+2. [Getting the datasets](#getting-the-datasets)
 3. [Quick Guide](#quick-guide) 
 4. [Known issues](#known-issues)
 5. [Roadmap](#roadmap)
