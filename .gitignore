@@ -10,3 +10,6 @@ __pycache__/
 
 # Test
 test/data/derivatives/config/
+
+# Ignore virtual environment
+venv/
