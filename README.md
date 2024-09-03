@@ -72,7 +72,7 @@ To execute a dry-run of the workflow, use:
 autoafids_prep path/to/dataset path/to/dataset/derivatives participant --cores 1 -np --force-output
 ```
 ## Known Issues
-- Some required modules like SimpleITK and reg_aladin are not installed along with the `autoafids_prep` package and therefore cause issues when the user specifies a profile flag (i.e., fast, slow) for the workflow. 
+- `Niftyreg` is a registration software that is required to run the pipeline but it's not installed along with the `autoafids_prep` package. On the CBS server, it comes pre-installed but a user testing on their local machine would need to install it manually. We can either add a section in the READEME on how to install it manually for local testing or alert users to work on the CBS server. 
 
 ## Roadmap
 Here are some future plans for `autoafids_prep`:
