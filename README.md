@@ -72,8 +72,8 @@ To execute a dry-run of the workflow, use:
 autoafids_prep path/to/dataset path/to/dataset/derivatives participant --cores 1 -np --force-output
 ```
 ## Known Issues
-- `Niftyreg` is a registration software that is required to run the pipeline but it's not installed along with the `autoafids_prep` package. On the CBS server, it comes pre-installed but a user testing on their local machine would need to install it manually. We can either add a section in the README on how to install it manually for local testing or alert users to work on the CBS server.
-- The pipeline fails when a user works with either a medium or a slow profile flag (i.e., ` --profile slow`).
+- Niftyreg is a registration software that is required to run the pipeline but it's not installed along with the `autoafids_prep` package. On the CBS server, it comes pre-installed but a user testing on their local machine would need to install it manually. We can either add a section in the README on how to install it manually for local testing or alert users to work on the CBS server.
+- Currently, the slow and medium flags in the pipeline are under development.
 
 ## Roadmap
 Here are some future plans for `autoafids_prep`:
