@@ -79,7 +79,7 @@ parse_args:
   --profile:
     help: 'Specify the profile and configration for preprocessing. If custom is chosen, then an interactive mode is triggered (default: %(default)s)'
     choices: ['slow','medium','fast','superfast','custom']
-    default: 'superfast'
+    default: 'fast'
 
   --norm:
     help: 'Specify the normalization scheme for images as a binary choice. {0 = z-score, 1 = min-max , 2 = tissue-based [notavailable]}. (default: %(default)s)'
