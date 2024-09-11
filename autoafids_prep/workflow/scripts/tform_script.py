@@ -8,7 +8,19 @@ import pandas as pd
 
 
 def determineFCSVCoordSystem(input_fcsv):
-    """Need to determine if fcsv is RAS / LPS"""
+    """
+    Determines if the fcsv file uses Right-Anterior-Superior (RAS) or Left-Posterior-Superior (LPS) coordiante system.
+
+    Parameters
+    ----------
+        input_fscv:: str
+            filename
+    Returns
+    -------
+        coord_sys:: str
+            Coordinate system found in the fscv file
+
+    """
 
     coord_flag = re.compile("# CoordinateSystem")
     coord_sys = None
@@ -28,6 +40,28 @@ def determineFCSVCoordSystem(input_fcsv):
 
 
 def xfm_fcsv(fcsv_source, xfm_txt, template, fcsv_new):
+    """
+
+    Parameters
+    ----------
+        fscv_source:: str
+            Filepath to the source fscv file.
+
+        xfm_txt:: str
+            Filepath to the xfm file.
+
+        template:: str
+            Filepath to the template.
+
+        fscv_new:: str
+            New fscv file with updated coordinate system.
+
+    Returns
+    -------
+        None
+
+    """
+
     # Load transform and groundtruth fcsv
     sub2template = np.loadtxt(xfm_txt)
     fcsv_df = pd.read_table(fcsv_source, sep=",", header=2)

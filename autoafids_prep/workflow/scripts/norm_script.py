@@ -5,7 +5,23 @@ import nibabel as nib
 
 
 def normalize(input_im, output_im):
-    """Normalize MRI image"""
+    """
+
+    To normalize MRI image using min-max technique.
+
+    Parameters
+    ----------
+        input_im:: str
+            Input image that needs to be normalized.
+
+        output_im:: str
+            Name of the modified image
+
+    Returns
+    -------
+        None
+
+    """
     nii = nib.load(input_im)
     nii_affine = nii.affine
     nii_data = nii.get_fdata()
