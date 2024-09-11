@@ -17,7 +17,7 @@ def determineFCSVCoordSystem(input_fcsv):
             filename
     Returns
     -------
-        coord_sys:: ??? (Ask Alaa)
+        coord_sys:: str
             Coordinate system found in the fscv file
 
     """
