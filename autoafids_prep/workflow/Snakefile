@@ -248,6 +248,24 @@ if "resample_im" in profile_settings:
         script:
             "./scripts/resample_img.py"
 
+# rule mni2sub:
+#     input:
+#         im_resamp = rules.n4_bias_correction.output.corrected_im if "n4_bias_correction" in profile_settings else
+#             bids(root=str(Path(config["bids_dir"])),
+#             datatype="anat",
+#             suffix="T1w.nii.gz",
+#             **inputs["t1w"].wildcards)
+#     output: 
+#         xfm_ras = greedy_bids(suffix="xfm.mat"),
+#         out_im = greedy_bids(suffix="MNI.nii.gz")
+#     params:
+#         moving = str(Path(workflow.basedir).parent / chosen_template)
+#     shell: 
+#         """
+#         reg_aladin -flo {params.moving} -ref {input.im_resamp} -rigOnly -res {output.out_im} -aff {output.xfm_ras}
+#         """
+#         #greedy -d 3 -a -dof 6 -o {output.xfm_ras} -i {input.im_resamp} {params.moving} -n 100x50x0 -m NCC 4x4x4
+
 rule mni2sub:
     input:
         im_resamp = rules.n4_bias_correction.output.corrected_im if "n4_bias_correction" in profile_settings else
@@ -260,11 +278,8 @@ rule mni2sub:
         out_im = greedy_bids(suffix="MNI.nii.gz")
     params:
         moving = str(Path(workflow.basedir).parent / chosen_template)
-    shell: 
-        """
-        reg_aladin -flo {params.moving} -ref {input.im_resamp} -rigOnly -res {output.out_im} -aff {output.xfm_ras}
-        """
-        #greedy -d 3 -a -dof 6 -o {output.xfm_ras} -i {input.im_resamp} {params.moving} -n 100x50x0 -m NCC 4x4x4
+    script: 
+        "./scripts/regis_script.py"
 
 rule mni2subfids:
     input:
