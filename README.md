@@ -1,15 +1,15 @@
 # Anatomical Fiducials (AFIDs) Data Processing Pipeline 
-Robarts Research Institute Team - 2023-2024
+AIMS Lab Research Team at the Robarts Research Institute - 2023-2024
 
 
 *This package is under active development. It should be stable and reproducible, but please let any of the active contributing members know if there are any bugs or unusual behaviour.*
 
-This Python package is a data processing pipeline based on Snakemake and SnakeBIDS workflow management tools to prepare data for a Convolutional Neural Network (CNN) deep learning model [AFIDS-CNN](https://github.com/afids/afids-CNN). Since AFIDS-CNN is under active development, this package contains tunable parameters that are not normally exposed in a data processing pipeline; the user is highly encourage to read docstrings and get familiar with the relevant workflow managements tools prior to using this software. Likewise, there may be frequent updates to this package as the project matures (see the [changelog](CHANGELOG.md) for more details).
+This Python package is a data processing pipeline based on Snakemake and SnakeBIDS workflow management tools to prepare data for a Convolutional Neural Network (CNN) deep learning model [afids-CNN](https://github.com/afids/afids-CNN). Since AFIDS-CNN is under active development, this package contains tunable parameters that are not normally exposed in a data processing pipeline; the user is highly encourage to read docstrings and get familiar with the relevant workflow managements tools prior to using this software. Likewise, there may be frequent updates to this package as the project matures (see the [changelog](CHANGELOG.md) for more details).
 
 ## Brief Overview of the Pipeline
-1. Performs rigid registraion to MNI template.
-2. Conformes images to 1 mm isotropic resolution. 
-3. Executes intensity normalization (i.e., White Matter (WM) to 110) followed by min-max normalization.
+1. Performs rigid registration (i.e., 6 d.o.f) from MNI template to Native space.
+2. Conformes images to a desired isotropic resolution (default: 1mm). 
+3. Executes image intensity normalization by various supported algorithms (default: min-max normalization).
 
 ## Table of Contents
 1. [Installation](#installation)
