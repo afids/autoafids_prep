@@ -29,7 +29,7 @@ def determineFCSVCoordSystem(input_fcsv):
 
         # Loop through header to find coordinate system (break out of loop once found)
         for row in rdr:
-            cleaned_dict = {k: v for k, v in row.items() if k is not None}
+            cleaned_dict = {k: v for k, v in row.items() if k != None}
             if any(coord_flag.match(x) for x in list(cleaned_dict.values())):
                 coord_str = list(filter(coord_flag.match, list(cleaned_dict.values())))
                 coord_sys = coord_str[0].split("=")[-1].strip()
