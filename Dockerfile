@@ -6,33 +6,39 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/list/*
 
-# Download and configure Miniconda
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
-    bash miniconda.sh -b -p /opt/conda && \
-    rm miniconda.sh
+# # Download and configure Miniconda
+# RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && \
+#     bash miniconda.sh -b -p /opt/conda && \
+#     rm miniconda.sh
 
-# Update PATH environment variable
-ENV PATH /opt/conda/bin:$PATH
+# # Update PATH environment variable
+# ENV PATH /opt/conda/bin:$PATH
 
-RUN conda create -n myenv python=3.10 -y \
-    && conda clean --all --yes
+# # Create virtual environment
+# RUN conda create -n myenv python=3.10 -y \
+#     && conda clean --all --yes
 
-# Create a conda environment and install ITK
-RUN /bin/bash -c "conda init && source ~/.bashrc && conda activate myenv && conda install -c conda-forge itk -y"
+# # Activate the conda environment and install ITK
+# RUN /bin/bash -c "conda init && source ~/.bashrc && conda activate myenv && conda install -c conda-forge itk -y"
 
-# Set environment variables
-ENV PATH /opt/conda/envs/myenv/bin:$PATH
+# # Set environment variables
+# ENV PATH /opt/conda/envs/myenv/bin:$PATH
 
+# Install poetry
 RUN pip install poetry
 
-# Clone and install package
-RUN mkdir -p /opt/my-package && mkdir /opt/my-package/bids_dataset && mkdir /opt/my-package/output
-WORKDIR /opt/my-package
-RUN git clone -b djay/registration https://github.com/afids/autoafids_prep.git
+# Create directory structure and copy files
+# COPY poetry.lock pyproject.toml /opt/mypackage/autoafids_prep/
+# COPY autoafids_prep /opt/mypackage/autoafids_prep/autoafids_prep
+WORKDIR /opt/mypackage
+ARG CACHEBUST=1
+COPY . /opt/mypackage/autoafids_prep
+# RUN git clone -b djay/registration https://github.com/afids/autoafids_prep.git
 
-# Add antspyx FOR NOW!
-RUN /bin/bash -c "source ~/.bashrc && cd ./autoafids_prep && poetry install"
-WORKDIR /opt/my-package/autoafids_prep
+# Install the pipeline.
+RUN /bin/bash -c "source ~/.bashrc && cd /opt/mypackage/autoafids_prep && poetry install"
+WORKDIR /opt/mypackage/autoafids_prep
 
-# Expose the entrypoint to run the pipeline
+# Run the pipeline
+# ENTRYPOINT [ "/bin/bash", "-c" ]
 ENTRYPOINT ["poetry","run","autoafids_prep"]
