@@ -21,4 +21,5 @@ RUN poetry install --no-dev && \
     poetry cache clear pypi --all
 
 # Run the pipeline
+# ENTRYPOINT [ "/bin/bash", "-c" ]
 ENTRYPOINT ["poetry","run","autoafids_prep"]
