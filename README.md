@@ -4,7 +4,7 @@ AIMS Lab Research Team at the Robarts Research Institute - 2023-2024
 
 *This package is under active development. It should be stable and reproducible, but please let any of the active contributing members know if there are any bugs or unusual behaviour.*
 
-This Python package is a data processing pipeline based on Snakemake and SnakeBIDS workflow management tools to prepare data for a Convolutional Neural Network (CNN) deep learning model [afids-CNN](https://github.com/afids/afids-CNN). Since AFIDS-CNN is under active development, this package contains tunable parameters that are not normally exposed in a data processing pipeline; the user is highly encourage to read docstrings and get familiar with the relevant workflow managements tools prior to using this software. Likewise, there may be frequent updates to this package as the project matures (see the [changelog](CHANGELOG.md) for more details).
+This Python package is a data processing pipeline based on Snakemake and SnakeBIDS workflow management tools to prepare data for a Convolutional Neural Network (CNN) deep learning model [afids-CNN](https://github.com/afids/afids-CNN). Since afids-CNN is under active development, this package contains tunable parameters that are not normally exposed in a data processing pipeline; the user is highly encourage to read docstrings and get familiar with the relevant workflow managements tools prior to using this software. Likewise, there may be frequent updates to this package as the project matures (see the [changelog](CHANGELOG.md) for more details).
 
 ## Brief Overview of the Pipeline
 1. Performs rigid registration (i.e., 6 d.o.f) from MNI template to Native space.
@@ -13,13 +13,18 @@ This Python package is a data processing pipeline based on Snakemake and SnakeBI
 
 ## Table of Contents
 1. [Installation](#installation)
-2. [Getting the datasets](#getting-the-datasets)
-3. [Quick Guide](#quick-guide) 
-4. [Known issues](#known-issues)
-5. [Roadmap](#roadmap)
-6. [Questions, Issues, Suggestions, and Other Feedback](#questions--issues)
+2. [Building the Docker image](docker/README.md)
+3. [Getting the datasets](#getting-the-datasets)
+4. [Quick Guide](#quick-guide) 
+5. [Known issues](#known-issues)
+6. [Roadmap](#roadmap)
+7. [Questions, Issues, Suggestions, and Other Feedback](#questions--issues)
 
 ## Installation
+
+<div style="color: red; font-weight: bold;">
+  <p>⚠️ <strong>Warning:</strong> Local installation on Apple M1/M2 is currently not supported. You can still run the pipeline by building a docker container, but it'll be an emulated amd64 container and fairly slow. </p>
+</div>
 
 ### Installing Poetry
 We use poetry tool for dependency management and to package the python project. You can find step by step instructions on how to install it by visiting it's official [website](https://python-poetry.org/docs/).
@@ -45,12 +50,6 @@ If you want to install in _develop mode_, use:
 poetry install -e
 ```
 
-To activate the virtual environment, use:
-
-```bash
-poetry shell
-```
-
 ## Getting the datasets
 All the datasets mentioned below have been deposited at DOI-issuing repositories separately and follow the BIDS directory hierarchy. To download them, follow the links:
 
@@ -69,16 +68,14 @@ autoafids_prep -h
 To execute a dry-run of the workflow, use:
 
 ```
-autoafids_prep path/to/dataset path/to/dataset/derivatives participant --cores 1 -np --force-output
+autoafids_prep path/to/dataset path/to/dataset/derivatives participant --cores 1 -np
 ```
 ## Known Issues
-- Niftyreg is a registration software that is required to run the pipeline but it's not installed along with the `autoafids_prep` package. On the CBS server, it comes pre-installed but a user testing on their local machine would need to install it manually. We can either add a section in the README on how to install it manually for local testing or alert users to work on the CBS server.
-- Currently, the slow and medium flags in the pipeline are under development.
+- Slow and medium flags in the pipeline are under development and therefore do not work.
 
 ## Roadmap
 Here are some future plans for `autoafids_prep`:
-- Synchronize the pipeline with [AFIDS-CNN](https://github.com/afids/afids-CNN) to avoid latency between downloading the datasets and preparing them for training the model. 
-- Might be worth exploring docker containerizing the pipeline. 
+- Synchronize the pipeline with [afids-CNN](https://github.com/afids/afids-CNN) to avoid latency between downloading the datasets and preparing them for training the model. 
 
 ## Questions, Issues, Suggestions, and Other Feedback
 Please reach out if you have any questions, suggestions, or other feedback related to this software—either through email (dbansal7@uwo.ca) or the discussions page. Larger issues or feature requests can be posted and tracked via the issues page. Finally, you can also reach out to Alaa Taha, the Science Lead for autoafids_prep.
