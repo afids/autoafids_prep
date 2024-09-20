@@ -23,7 +23,7 @@ This Python package is a data processing pipeline based on Snakemake and SnakeBI
 ## Installation
 
 <div style="color: red; font-weight: bold;">
-  <p>⚠️ <strong>Warning:</strong> Local installation on Apple M1/M2 is currently not supported. You can still run the pipeline by building a docker container, but it'll be an emulated amd64 container and fairly slow. </p>
+  <p>⚠️ <strong>Warning:</strong> Local installation on Apple M1 is currently not supported. You can still run the pipeline by building a docker container, but it'll be an emulated amd64 container and fairly slow. </p>
 </div>
 
 ### Installing Poetry
