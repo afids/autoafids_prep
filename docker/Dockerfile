@@ -1,25 +1,42 @@
-FROM --platform=linux/amd64 python:3.10-slim
+# Integrating poetry with docker <https://stackoverflow.com/questions/72465421/how-to-use-poetry-with-docker>
+FROM --platform=linux/amd64 python:3.10-slim AS builder
 
-RUN apt-get update && \
-    apt-get install -y \
-    git gcc g++ python3-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/list/*
+ENV POETRY_VERSOIN=1.8.3
+ENV POETRY_HOME=/opt/poetry
+ENV POETRY_VENV=/opt/poetry-venv
 
-# Install poetry
-RUN pip install poetry
+ENV POETRY_CACHE_DIR=/opt/.cache
+
+FROM builder as poetry-base
+
+RUN python3 -m venv $POETRY_VENV \
+    && $POETRY_VENV/bin/pip install -U pip setuptools \
+    && $POETRY_VENV/bin/pip install poetry==${POETRY_VERSOIN}
+
+FROM builder as app
+
+RUN apt-get update \
+    && apt-get install -y \
+    gcc g++ \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/list/*
+
+COPY --from=poetry-base ${POETRY_VENV} ${POETRY_VENV}
+
+ENV PATH="${PATH}:${POETRY_VENV}/bin"
 
 # Create directory structure and copy files
-WORKDIR /opt/mypackage
+WORKDIR /opt/mypackage/autoafids_prep
 ARG CACHEBUST=1
-COPY . /opt/mypackage/autoafids_prep
-# RUN git clone -b djay/registration https://github.com/afids/autoafids_prep.git
+
+# For some strange reason, I need to copy the README file; otherwise, 
+# the container complains that Poetry didn't install the package.
+COPY poetry.lock pyproject.toml README.md ./
+COPY autoafids_prep /opt/mypackage/autoafids_prep/autoafids_prep
 
 # Install the pipeline.
-WORKDIR /opt/mypackage/autoafids_prep
-RUN poetry install --no-dev && \
-    poetry cache clear pypi --all
+RUN poetry install --no-interaction --no-cache --without dev \
+    && poetry cache clear pypi --all
 
 # Run the pipeline
-# ENTRYPOINT [ "/bin/bash", "-c" ]
 ENTRYPOINT ["poetry","run","autoafids_prep"]
