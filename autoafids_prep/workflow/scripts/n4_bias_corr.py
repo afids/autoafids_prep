@@ -1,7 +1,5 @@
 # scripts/n4_bias_correction_snakemake.py
-import SimpleITK as sitk
-import sys
-
+import ants
 
 def n4_bias_correction(input_image_path, output_image_path):
     """
@@ -19,14 +17,12 @@ def n4_bias_correction(input_image_path, output_image_path):
     -------
         None
     """
-    input_image = sitk.ReadImage(input_image_path, sitk.sitkFloat32)
-
-    corrector = sitk.N4BiasFieldCorrectionImageFilter()
+    input_image = ants.image_read(input_image_path)
 
     # Perform the bias field correction
-    output_image = corrector.Execute(input_image)
+    output_image = ants.n4_bias_field_correction(input_image)
 
-    sitk.WriteImage(output_image, output_image_path)
+    ants.image_write(output_image, output_image_path)
 
 
 def main(snakemake):
