@@ -27,6 +27,7 @@ def n4_bias_correction(input_image_path, output_image_path):
 
 
 
+
 def main(snakemake):
     input_image_path = snakemake.input.im
     output_image_path = snakemake.output.corrected_im
