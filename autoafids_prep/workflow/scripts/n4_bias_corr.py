@@ -1,6 +1,7 @@
 # scripts/n4_bias_correction_snakemake.py
 import ants
 
+
 def n4_bias_correction(input_image_path, output_image_path):
     """
     Performs n4 bias field correction.
@@ -23,6 +24,7 @@ def n4_bias_correction(input_image_path, output_image_path):
     output_image = ants.n4_bias_field_correction(input_image)
 
     ants.image_write(output_image, output_image_path)
+
 
 
 def main(snakemake):
