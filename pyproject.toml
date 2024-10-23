@@ -20,7 +20,7 @@ numpy = [
 ]
 pandas = "^2.0.3"
 nilearn = "^0.10.3"
-simpleitk = "^2.4.0"
+antspyx = "^0.5.3"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
